@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airfare Price Index: DEL → HYD (CPI Augmentation)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.875rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease-in-out;
+    }
+    .card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.22rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .pulse-dot {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 9999px;
+      margin-right: 0.4rem;
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.15); }
+    }
+    .chart-tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: #0f172a;
+      color: #ffffff;
+      border: 1px solid #334155;
+      padding: 0.6rem 0.9rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.4);
+      display: none;
+      z-index: 50;
+      white-space: nowrap;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8 space-y-6 max-w-7xl mx-auto">
+
+  <!-- Interactive Chart Tooltip -->
+  <div id="tooltip" class="chart-tooltip"></div>
+
+  <!-- Header -->
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between pb-5 border-b border-slate-200 gap-4">
+    <div>
+      <div class="flex flex-wrap items-center gap-2 mb-2">
+        <span class="badge bg-blue-50 text-blue-700 border border-blue-200">
+          MOSPI / CPI Augmentation Project
+        </span>
+        <span class="badge bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono">
+          Route Corridor: DEL &rarr; HYD
+        </span>
+        <span class="badge bg-purple-50 text-purple-700 border border-purple-200">
+          UN/IMF Elementary Aggregates
+        </span>
+      </div>
+      <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+        Real-Time Airfare Price Index: DEL &rarr; HYD
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">
+        Delhi (Indira Gandhi Intl) &rarr; Hyderabad (Rajiv Gandhi Intl) across advance-purchase horizons (<span class="mono text-slate-700 font-medium">t+1, t+7, t+15, t+30</span>)
+      </p>
+    </div>
+
+    <!-- Live Status Badges -->
+    <div class="flex flex-wrap items-center gap-2.5">
+      <div class="card px-3.5 py-2 flex items-center gap-2">
+        <span class="pulse-dot bg-emerald-500"></span>
+        <div class="text-left">
+          <div class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Live Database</div>
+          <div id="headerFlightsCount" class="text-xs font-bold text-emerald-600 mono">Loading...</div>
+        </div>
+      </div>
+
+      <div class="card px-3.5 py-2 flex items-center gap-2">
+        <div class="text-left">
+          <div class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Daily Scheduler</div>
+          <div class="text-xs font-bold text-blue-600 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            09:00 AM IST
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Route Information Bar -->
+  <section class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+    <div class="flex flex-wrap items-center gap-3 text-xs">
+      <span class="font-semibold text-slate-700 flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+        Corridor: <b class="text-slate-900 ml-1">Delhi (DEL) &rarr; Hyderabad (HYD)</b>
+      </span>
+      <span class="text-slate-300">|</span>
+      <span class="text-slate-500">Class: <b class="text-slate-700">Economy / Single Passenger</b></span>
+      <span class="text-slate-300">|</span>
+      <span id="observationDaysCount" class="badge bg-slate-100 text-slate-700 border border-slate-200">
+        Observation Days: --
+      </span>
+    </div>
+  </section>
+
+  <!-- Metric Cards (3 Clean KPIs) -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Card 1: Current CPI -->
+    <div class="card p-5">
+      <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
+        <span>Current CPI Airfare Index</span>
+        <span class="badge bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono">DGCA Weighted</span>
+      </div>
+      <div id="kpiCurrentIndex" class="text-3xl font-extrabold mt-2 text-emerald-600 mono">--</div>
+      <div id="kpiInflationPct" class="text-xs text-slate-500 mt-1 font-medium">
+        Base Day = 100.00
+      </div>
+    </div>
+
+    <!-- Card 2: Average Fare -->
+    <div class="card p-5">
+      <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
+        <span>Average Fare (DEL &rarr; HYD)</span>
+        <span class="badge bg-blue-50 text-blue-700 border border-blue-200 font-mono">INR (&#8377;)</span>
+      </div>
+      <div id="kpiMeanFare" class="text-3xl font-extrabold mt-2 text-blue-600 mono">--</div>
+      <div id="kpiMinMaxFare" class="text-xs text-slate-500 mt-1 font-medium mono">
+        Min: -- | Max: --
+      </div>
+    </div>
+
+    <!-- Card 3: Balanced Panel Cohort -->
+    <div class="card p-5">
+      <div class="flex items-center justify-between text-xs font-semibold text-slate-500">
+        <span>Balanced Panel Cohort</span>
+        <span class="badge bg-purple-50 text-purple-700 border border-purple-200 font-mono">Matched Basket</span>
+      </div>
+      <div id="kpiBalancedFlights" class="text-3xl font-extrabold mt-2 text-purple-600 mono">--</div>
+      <div id="kpiBalancedStatus" class="text-xs text-slate-500 mt-1 font-medium mono">
+        Constant sample across all days
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Charts Section -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- Chart 1: Carrier Airfare Comparison -->
+    <div class="card p-5 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              Airline Carrier Price Comparison
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">Average DEL &rarr; HYD airfare by carrier with official DGCA domestic market shares</p>
+          </div>
+          <span id="carrierActiveBadge" class="badge bg-blue-50 text-blue-700 border border-blue-200 mono">Active Route Carriers</span>
+        </div>
+
+        <div id="carrierChartContainer" class="w-full h-64 relative flex items-center justify-center">
+          <svg id="carrierSvg" viewBox="0 0 500 220" class="w-full h-full overflow-visible"></svg>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between border-t border-slate-100 pt-3 mt-2 text-xs text-slate-500">
+        <span id="carrierLegendText" class="font-medium text-slate-600">--</span>
+        <span class="text-blue-600 font-semibold">DGCA Domestic Weight Applied &rarr;</span>
+      </div>
+    </div>
+
+    <!-- Chart 2: Daily CPI Trend with Line Hover Highlighting -->
+    <div class="card p-5 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              Inter-Temporal Daily CPI Price Movement
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">Time-series tracking matched flight cohort (Base Day = 100.0). <b class="text-slate-700">Hover over any line to highlight.</b></p>
+          </div>
+          <span class="badge bg-emerald-50 text-emerald-700 border border-emerald-200 mono">UN/IMF Standard</span>
+        </div>
+
+        <div id="cpiChartContainer" class="w-full h-64 relative flex items-center justify-center">
+          <svg id="cpiSvg" viewBox="0 0 500 220" class="w-full h-full overflow-visible"></svg>
+        </div>
+      </div>
+
+      <!-- Interactive Legend with Hover Highlighting -->
+      <div class="flex flex-wrap items-center justify-center gap-3 border-t border-slate-100 pt-3 mt-2 text-xs">
+        <span id="legend-line-weighted" onmouseenter="highlightCpiLine('line-weighted', event)" onmouseleave="resetCpiLines()" class="px-2.5 py-1 rounded-md bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 cursor-pointer transition flex items-center gap-1.5 font-medium">
+          <span class="w-3 h-1 bg-emerald-600 rounded"></span> <b>DGCA Weighted</b> (61% IndiGo, 27% Air India)
+        </span>
+        <span id="legend-line-dutot" onmouseenter="highlightCpiLine('line-dutot', event)" onmouseleave="resetCpiLines()" class="px-2.5 py-1 rounded-md bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200 cursor-pointer transition flex items-center gap-1.5 font-medium">
+          <span class="w-3 h-1 bg-blue-600 rounded"></span> <b>Dutot</b> (Arithmetic Mean)
+        </span>
+        <span id="legend-line-jevons" onmouseenter="highlightCpiLine('line-jevons', event)" onmouseleave="resetCpiLines()" class="px-2.5 py-1 rounded-md bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 cursor-pointer transition flex items-center gap-1.5 font-medium">
+          <span class="w-3 h-1 bg-amber-600 rounded"></span> <b>Jevons</b> (Geometric Mean)
+        </span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Inline / External Script for Data Loading & SVG Rendering -->
+  <script src="data/dashboard_data.js"></script>
+  <script>
+    let globalDashboardData = null;
+    let activeLinesList = [];
+
+    // Tooltip Helpers
+    const tooltip = document.getElementById("tooltip");
+    function showTooltip(e, html) {
+      tooltip.innerHTML = html;
+      tooltip.style.display = "block";
+      const x = e.pageX + 14;
+      const y = e.pageY - 28;
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top = `${y}px`;
+    }
+    function hideTooltip() {
+      tooltip.style.display = "none";
+    }
+
+    async function loadData() {
+      // 1. First priority: Check window.DASHBOARD_DATA
+      if (window.DASHBOARD_DATA && (window.DASHBOARD_DATA.kpis || window.DASHBOARD_DATA.data)) {
+        extractAndRender(window.DASHBOARD_DATA);
+        return;
+      }
+
+      // 2. Fallback to fetch if served over local HTTP
+      try {
+        const response = await fetch("data/dashboard_data.json?t=" + new Date().getTime());
+        if (response.ok) {
+          const json = await response.json();
+          extractAndRender(json);
+          return;
+        }
+      } catch (err) {
+        console.warn("Could not fetch data/dashboard_data.json:", err);
+      }
+
+      showNoDataMessage();
+    }
+
+    function extractAndRender(payload) {
+      if (payload.data && payload.data["DEL -> HYD"]) {
+        globalDashboardData = payload.data["DEL -> HYD"];
+      } else {
+        globalDashboardData = payload;
+      }
+      globalDashboardData.last_updated = payload.last_updated || globalDashboardData.last_updated;
+      renderDashboard();
+    }
+
+    function showNoDataMessage() {
+      document.getElementById("headerFlightsCount").innerText = "No Data Found";
+      document.getElementById("observationDaysCount").innerText = "Please run calculate_index.py";
+    }
+
+    function renderDashboard() {
+      if (!globalDashboardData || !globalDashboardData.kpis) return;
+
+      const data = globalDashboardData;
+      const kpis = data.kpis;
+
+      // Update Header Badges
+      document.getElementById("headerFlightsCount").innerText = `${kpis.total_flights.toLocaleString()} Flights Recorded`;
+
+      const firstDate = data.daily_trend[0]?.date?.slice(5) || '';
+      const lastDate = data.daily_trend[data.daily_trend.length - 1]?.date?.slice(5) || '';
+      document.getElementById("observationDaysCount").innerText = `${kpis.days_tracked} Days Tracked (${firstDate} → ${lastDate})`;
+
+      // Render KPIs (3 Clean Cards)
+      const isInflation = kpis.inflation_pct >= 0;
+      document.getElementById("kpiCurrentIndex").innerText = kpis.latest_index.toFixed(2);
+      document.getElementById("kpiInflationPct").innerHTML = `
+        <span class="${isInflation ? 'text-rose-600' : 'text-emerald-600'} font-semibold">
+          ${isInflation ? '+' : ''}${kpis.inflation_pct.toFixed(2)}%
+        </span> vs Base Period (100.0)
+      `;
+
+      document.getElementById("kpiMeanFare").innerHTML = `&#8377;${Math.round(kpis.mean_fare).toLocaleString('en-IN')}`;
+      document.getElementById("kpiMinMaxFare").innerHTML = `Min: &#8377;${Math.round(kpis.min_fare).toLocaleString('en-IN')} | Max: &#8377;${Math.round(kpis.max_fare).toLocaleString('en-IN')}`;
+
+      document.getElementById("kpiBalancedFlights").innerText = (kpis.balanced_panel_flights || 86).toLocaleString();
+      document.getElementById("kpiBalancedStatus").innerHTML = `
+        <span class="text-purple-700 font-semibold">Constant sample</span> across all observation days
+      `;
+
+      // Render Charts
+      renderCarrierChart(data.carriers);
+      renderDailyTrendChart(data.daily_trend);
+    }
+
+    // Chart 1: Carrier Comparison SVG Bar Chart (Only airlines with active route flights)
+    function renderCarrierChart(carriers) {
+      const svg = document.getElementById("carrierSvg");
+      svg.innerHTML = "";
+
+      // Filter only airlines that actually have observed flights on the route
+      const fullCarriers = (carriers || []).filter(c => c.flights > 0 && c.avg_price > 0);
+
+      // Update footer text and badge dynamically
+      const legendTextEl = document.getElementById("carrierLegendText");
+      if (legendTextEl) {
+        legendTextEl.innerText = fullCarriers.map(c => c.carrier).join(" • ");
+      }
+      const badgeEl = document.getElementById("carrierActiveBadge");
+      if (badgeEl) {
+        badgeEl.innerText = `${fullCarriers.length} Active Route Carriers`;
+      }
+
+      if (fullCarriers.length === 0) {
+        svg.innerHTML = `<text x="250" y="110" fill="#64748b" text-anchor="middle" font-size="12">No active carrier observations found</text>`;
+        return;
+      }
+
+      const width = 500;
+      const height = 220;
+      const paddingLeft = 60;
+      const paddingRight = 40;
+      const paddingTop = 32;
+      const paddingBottom = 48;
+
+      const plotW = width - paddingLeft - paddingRight;
+      const plotH = height - paddingTop - paddingBottom;
+
+      const maxFare = Math.max(...fullCarriers.map(c => c.avg_price), 10000) * 1.18;
+      const minFare = 0;
+
+      // Horizontal grid lines (Light Theme)
+      const gridCount = 4;
+      for (let i = 0; i <= gridCount; i++) {
+        const yVal = minFare + (i / gridCount) * maxFare;
+        const y = paddingTop + plotH - (i / gridCount) * plotH;
+        svg.innerHTML += `
+          <line x1="${paddingLeft}" y1="${y}" x2="${width - paddingRight}" y2="${y}" stroke="#e2e8f0" stroke-dasharray="${i === 0 ? '' : '3,3'}" stroke-width="${i === 0 ? '1.5' : '1'}" />
+          <text x="${paddingLeft - 8}" y="${y + 3}" fill="#64748b" font-size="9" text-anchor="end" class="mono">&#8377;${Math.round(yVal / 1000)}k</text>
+        `;
+      }
+
+      const barColors = {
+        "IndiGo": "#2563eb",
+        "Air India": "#dc2626",
+        "Akasa Air": "#ea580c",
+        "SpiceJet": "#9333ea",
+        "Others": "#0284c7"
+      };
+
+      const n = fullCarriers.length;
+      const barWidth = Math.min(58, (plotW / n) * 0.48);
+      const gap = plotW / n;
+
+      fullCarriers.forEach((c, idx) => {
+        const x = paddingLeft + idx * gap + (gap - barWidth) / 2;
+        const color = barColors[c.carrier] || "#2563eb";
+        const barH = (c.avg_price / maxFare) * plotH;
+        const y = paddingTop + plotH - barH;
+
+        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        rect.setAttribute("x", x);
+        rect.setAttribute("y", y);
+        rect.setAttribute("width", barWidth);
+        rect.setAttribute("height", barH);
+        rect.setAttribute("rx", 5);
+        rect.setAttribute("fill", color);
+        rect.setAttribute("fill-opacity", "0.92");
+        rect.setAttribute("stroke", color);
+        rect.setAttribute("stroke-width", "1.5");
+        rect.style.cursor = "pointer";
+        rect.style.transition = "all 0.2s ease";
+
+        rect.onmouseenter = (e) => {
+          rect.setAttribute("fill-opacity", "1.0");
+          rect.style.filter = "drop-shadow(0 4px 8px rgba(0,0,0,0.18))";
+          showTooltip(e, `
+            <div class="font-bold text-white text-xs">${c.carrier}</div>
+            <div class="text-emerald-400 mt-0.5">Average Fare: <b>&#8377;${Math.round(c.avg_price).toLocaleString('en-IN')}</b></div>
+            <div class="text-slate-300 text-[11px] mt-0.5">Min: &#8377;${Math.round(c.min_price).toLocaleString('en-IN')} | Max: &#8377;${Math.round(c.max_price).toLocaleString('en-IN')}</div>
+            <div class="text-blue-300 text-[11px]">DGCA Domestic Weight: <b>${c.market_share}%</b></div>
+            <div class="text-slate-400 text-[11px]">Flights Sampled: <b>${c.flights}</b></div>
+          `);
+        };
+        rect.onmouseleave = () => {
+          rect.setAttribute("fill-opacity", "0.92");
+          rect.style.filter = "none";
+          hideTooltip();
+        };
+        svg.appendChild(rect);
+
+        // Price label above bar (formatted with comma or k)
+        svg.innerHTML += `
+          <text x="${x + barWidth / 2}" y="${y - 8}" fill="#0f172a" font-size="11" font-weight="700" text-anchor="middle" class="mono">&#8377;${Math.round(c.avg_price).toLocaleString('en-IN')}</text>
+        `;
+
+        // Carrier name & market weight label below axis
+        svg.innerHTML += `
+          <text x="${x + barWidth / 2}" y="${paddingTop + plotH + 18}" fill="#1e293b" font-size="11" font-weight="600" text-anchor="middle">${c.carrier}</text>
+          <text x="${x + barWidth / 2}" y="${paddingTop + plotH + 32}" fill="#64748b" font-size="9" text-anchor="middle">(${c.market_share}% DGCA wt)</text>
+        `;
+      });
+    }
+
+    // Chart 2: Inter-Temporal Daily CPI Trend SVG with Interactive Line Highlighting
+    function renderDailyTrendChart(dailyData) {
+      const svg = document.getElementById("cpiSvg");
+      svg.innerHTML = "";
+
+      if (!dailyData || dailyData.length === 0) {
+        svg.innerHTML = `<text x="250" y="110" fill="#64748b" text-anchor="middle" font-size="12">No Daily CPI Trend Available</text>`;
+        return;
+      }
+
+      const width = 500;
+      const height = 220;
+      const paddingLeft = 55;
+      const paddingRight = 55;
+      const paddingTop = 30;
+      const paddingBottom = 45;
+
+      const plotW = width - paddingLeft - paddingRight;
+      const plotH = height - paddingTop - paddingBottom;
+
+      let allIndices = [];
+      dailyData.forEach(d => {
+        allIndices.push(d.weighted, d.dutot, d.jevons, 100.0);
+      });
+      const minI = Math.min(...allIndices) - 3;
+      const maxI = Math.max(...allIndices) + 3;
+
+      // Base 100.0 horizontal line
+      const base100Y = paddingTop + plotH - ((100.0 - minI) / (maxI - minI || 1)) * plotH;
+      svg.innerHTML += `
+        <line x1="${paddingLeft}" y1="${base100Y}" x2="${width - paddingRight}" y2="${base100Y}" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4" />
+        <text x="${width - paddingRight + 6}" y="${base100Y + 3}" fill="#64748b" font-size="9" font-weight="600" class="mono">Base 100.0</text>
+      `;
+
+      // Horizontal grid lines
+      [minI, (minI + maxI) / 2, maxI].forEach(val => {
+        const y = paddingTop + plotH - ((val - minI) / (maxI - minI || 1)) * plotH;
+        svg.innerHTML += `
+          <line x1="${paddingLeft}" y1="${y}" x2="${width - paddingRight}" y2="${y}" stroke="#e2e8f0" stroke-dasharray="2,2" stroke-width="1" />
+          <text x="${paddingLeft - 8}" y="${y + 3}" fill="#64748b" font-size="9" text-anchor="end" class="mono">${val.toFixed(1)}</text>
+        `;
+      });
+
+      const getPointsForField = (field) => {
+        return dailyData.map((d, idx) => {
+          const x = paddingLeft + (idx / (dailyData.length - 1 || 1)) * plotW;
+          const y = paddingTop + plotH - ((d[field] - minI) / (maxI - minI || 1)) * plotH;
+          return { x, y, val: d[field], date: d.date, flights: d.flights, meanFare: d.mean_fare };
+        });
+      };
+
+      const weightedPts = getPointsForField("weighted");
+      const dutotPts = getPointsForField("dutot");
+      const jevonsPts = getPointsForField("jevons");
+
+      activeLinesList = [
+        { id: "line-weighted", pts: weightedPts, stroke: "#059669", baseWidth: 3.5, dash: "", name: "DGCA Weighted Index", desc: "Official DGCA domestic market share weighted geometric aggregate" },
+        { id: "line-dutot", pts: dutotPts, stroke: "#2563eb", baseWidth: 2.5, dash: "4,3", name: "Dutot Index", desc: "Arithmetic mean price ratio (Carli/Dutot elementary aggregate)" },
+        { id: "line-jevons", pts: jevonsPts, stroke: "#d97706", baseWidth: 2.5, dash: "5,2", name: "Jevons Index", desc: "Geometric mean of matched price relatives (UN/IMF standard)" },
+      ];
+
+      // Draw the visible polylines
+      activeLinesList.forEach(line => {
+        const polyline = line.pts.map(p => `${p.x},${p.y}`).join(" ");
+        svg.innerHTML += `
+          <polyline id="${line.id}" points="${polyline}" fill="none" stroke="${line.stroke}" stroke-width="${line.baseWidth}" stroke-dasharray="${line.dash}" stroke-linecap="round" stroke-linejoin="round" style="transition: all 0.25s ease;" />
+        `;
+      });
+
+      // Draw invisible wider hit-areas for easy hovering on each line
+      activeLinesList.forEach(line => {
+        const polyline = line.pts.map(p => `${p.x},${p.y}`).join(" ");
+        const hit = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+        hit.setAttribute("points", polyline);
+        hit.setAttribute("fill", "none");
+        hit.setAttribute("stroke", "transparent");
+        hit.setAttribute("stroke-width", "16");
+        hit.style.cursor = "pointer";
+
+        hit.onmouseenter = (e) => highlightCpiLine(line.id, e);
+        hit.onmousemove = (e) => highlightCpiLine(line.id, e);
+        hit.onmouseleave = resetCpiLines;
+        svg.appendChild(hit);
+      });
+
+      // Draw points for each line
+      activeLinesList.forEach(line => {
+        line.pts.forEach((p, idx) => {
+          const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("cx", p.x);
+          circle.setAttribute("cy", p.y);
+          circle.setAttribute("r", "5");
+          circle.setAttribute("fill", line.stroke);
+          circle.setAttribute("stroke", "#ffffff");
+          circle.setAttribute("stroke-width", "2");
+          circle.setAttribute("class", `circle-${line.id}`);
+          circle.style.cursor = "pointer";
+          circle.style.transition = "all 0.25s ease";
+
+          circle.onmouseenter = (e) => {
+            highlightCpiLine(line.id, e);
+            showTooltip(e, `
+              <div class="font-bold text-white text-xs mb-0.5" style="color: ${line.stroke}">${line.name}</div>
+              <div>Day ${idx + 1} (${p.date}): <b>${p.val.toFixed(2)}</b></div>
+              <div class="text-slate-300 text-[11px]">Matched Flights: <b>${p.flights}</b></div>
+              <div class="text-slate-300 text-[11px]">Mean Fare: <b>&#8377;${Math.round(p.meanFare).toLocaleString('en-IN')}</b></div>
+              <div class="text-[10px] text-slate-400 mt-1">${line.desc}</div>
+            `);
+          };
+          circle.onmouseleave = resetCpiLines;
+          svg.appendChild(circle);
+        });
+      });
+
+      // Bottom date ticks
+      weightedPts.forEach((p, idx) => {
+        const shortDate = p.date.length >= 10 ? p.date.slice(5) : p.date;
+        svg.innerHTML += `
+          <text x="${p.x}" y="${paddingTop + plotH + 18}" fill="#334155" font-size="10" font-weight="600" text-anchor="middle">Day ${idx + 1} (${shortDate})</text>
+          <text x="${p.x}" y="${paddingTop + plotH + 30}" fill="#64748b" font-size="9" text-anchor="middle">${p.flights} flights</text>
+        `;
+      });
+    }
+
+    // Line Highlight Interaction
+    window.highlightCpiLine = function(selectedId, e) {
+      if (!activeLinesList || activeLinesList.length === 0) return;
+
+      activeLinesList.forEach(l => {
+        const el = document.getElementById(l.id);
+        const circles = document.querySelectorAll(`.circle-${l.id}`);
+        const legendPill = document.getElementById(`legend-${l.id}`);
+
+        if (l.id === selectedId) {
+          if (el) {
+            el.setAttribute("stroke-width", "5.5");
+            el.setAttribute("opacity", "1.0");
+            el.style.filter = "drop-shadow(0 3px 6px rgba(0,0,0,0.2))";
+          }
+          circles.forEach(c => {
+            c.setAttribute("r", "7");
+            c.setAttribute("opacity", "1.0");
+          });
+          if (legendPill) {
+            legendPill.classList.add("ring-2", "ring-offset-1", "ring-slate-400", "shadow-sm");
+          }
+          if (e) {
+            const latestVal = l.pts[l.pts.length - 1].val;
+            showTooltip(e, `
+              <div class="font-bold text-white text-xs mb-0.5" style="color: ${l.stroke}">${l.name}</div>
+              <div class="text-slate-200">Index Value: <b>${latestVal.toFixed(2)}</b> (${(latestVal - 100).toFixed(2)}% vs base)</div>
+              <div class="text-slate-400 text-[11px] mt-1">${l.desc}</div>
+              <div class="text-[10px] text-blue-300 mt-0.5">Line highlighted</div>
+            `);
+          }
+        } else {
+          if (el) {
+            el.setAttribute("stroke-width", "1.5");
+            el.setAttribute("opacity", "0.22");
+            el.style.filter = "none";
+          }
+          circles.forEach(c => {
+            c.setAttribute("r", "3.5");
+            c.setAttribute("opacity", "0.22");
+          });
+          if (legendPill) {
+            legendPill.classList.remove("ring-2", "ring-offset-1", "ring-slate-400", "shadow-sm");
+          }
+        }
+      });
+    };
+
+    window.resetCpiLines = function() {
+      if (!activeLinesList) return;
+      activeLinesList.forEach(l => {
+        const el = document.getElementById(l.id);
+        const circles = document.querySelectorAll(`.circle-${l.id}`);
+        const legendPill = document.getElementById(`legend-${l.id}`);
+
+        if (el) {
+          el.setAttribute("stroke-width", l.baseWidth);
+          el.setAttribute("opacity", "1.0");
+          el.style.filter = "none";
+        }
+        circles.forEach(c => {
+          c.setAttribute("r", "5");
+          c.setAttribute("opacity", "1.0");
+        });
+        if (legendPill) {
+          legendPill.classList.remove("ring-2", "ring-offset-1", "ring-slate-400", "shadow-sm");
+        }
+      });
+      hideTooltip();
+    };
+
+
+    window.addEventListener("DOMContentLoaded", loadData);
+  </script>
+</body>
+</html>

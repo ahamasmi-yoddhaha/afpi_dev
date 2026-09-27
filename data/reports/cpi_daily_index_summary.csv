@@ -1,0 +1,5 @@
+observation_date,comparison_date,is_base_date,sample_size,matched_sample_size,mean_fare_inr,weighted_fare_inr,dutot_daily_index,jevons_daily_index,dgca_daily_index,dutot_index,jevons_index,carrier_weighted_index,inflation_from_base_pct
+2026-09-24,,True,82,82,9478.43,9468.28,100.0,100.0,100.0,100.0,100.0,100.0,0.0
+2026-09-25,2026-09-24,False,82,82,9185.82,9210.28,96.91,96.9,97.2,96.91,96.9,97.2,-2.8
+2026-09-26,2026-09-25,False,82,82,9375.28,9356.62,102.06,101.67,101.48,98.91,98.52,98.64,-1.36
+2026-09-27,2026-09-26,False,82,82,11389.72,11396.04,121.49,116.96,117.34,120.16,115.23,115.74,15.74

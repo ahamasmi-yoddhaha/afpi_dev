@@ -1,29 +1,26 @@
-# Virtual environment
-venv/
-.venv/
-
-# Python cache
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
 
-# Environment/secrets
-.env
-
-# IDE
-.vscode/
-.idea/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Generated datasets
-data/*.csv
-data/*.json
-flights_data.csv
-flights_data.json
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
 
 # Logs
-logs/
 *.log
+data/scheduler_output.log
+
+# Playwright
+.playwright/
+
+# OS / Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
