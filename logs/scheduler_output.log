@@ -1,0 +1,211 @@
+=================================================== 
+Run started at 25-09-2026 17:47:28.19 
+====================================================================
+ REAL-TIME AIRFARE PRICE SCRAPER (CPI AUGMENTATION)
+====================================================================
+[*] Route:          DEL -> HYD
+[*] Base Date (t):  2026-09-25 17:47:45
+[*] Target Lead:    t+1, t+7, t+15, t+30
+====================================================================
+
+[*] Scheduled Travel Horizons:
+    - t+1   (in 1  days): 2026-09-26 (Saturday)
+    - t+7   (in 7  days): 2026-10-02 (Friday)
+    - t+15  (in 15 days): 2026-10-10 (Saturday)
+    - t+30  (in 30 days): 2026-10-25 (Sunday)
+
+[*] Scraping DEL -> HYD for 2026-09-26 (t+1)...
+[+] Found 26 flights for horizon t+1 (2026-09-26).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-02 (t+7)...
+[+] Found 31 flights for horizon t+7 (2026-10-02).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-10 (t+15)...
+[+] Found 30 flights for horizon t+15 (2026-10-10).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-25 (t+30)...
+[+] Found 28 flights for horizon t+30 (2026-10-25).
+
+[+] Total flight records collected: 115
+[+] Saved structured JSON: C:\Users\manne\.gemini\antigravity\scratch\airfare-price-index\data\raw_json\flight_prices_DEL_HYD_20260925_174855.json
+[+] Saved tabular CSV:     C:\Users\manne\.gemini\antigravity\scratch\airfare-price-index\data\processed_csv\flight_prices_DEL_HYD_20260925_174855.csv
+
+====================================================================
+ AIRFARE SUMMARY BY HORIZON (DEL -> HYD)
+====================================================================
+Horizon    Days   Flights    Min (INR)      Avg (INR)      Max (INR)     
+--------------------------------------------------------------------
+t+1        1      26         Rs. 8060       Rs. 8795.1     Rs. 9362      
+t+7        7      31         Rs. 7982       Rs. 9102.5     Rs. 14203     
+t+15       15     30         Rs. 7982       Rs. 8935.4     Rs. 10292     
+t+30       30     28         Rs. 7982       Rs. 10860.4    Rs. 15243     
+====================================================================
+
+Run finished at 25-09-2026 17:48:56.53 
+=================================================== 
+Run started at 26-09-2026  9:00:31.18 
+====================================================================
+ REAL-TIME AIRFARE PRICE SCRAPER (CPI AUGMENTATION)
+====================================================================
+[*] Route:          DEL -> HYD
+[*] Base Date (t):  2026-09-26 09:01:17
+[*] Target Lead:    t+1, t+7, t+15, t+30
+====================================================================
+
+[*] Scheduled Travel Horizons:
+    - t+1   (in 1  days): 2026-09-27 (Sunday)
+    - t+7   (in 7  days): 2026-10-03 (Saturday)
+    - t+15  (in 15 days): 2026-10-11 (Sunday)
+    - t+30  (in 30 days): 2026-10-26 (Monday)
+
+[*] Scraping DEL -> HYD for 2026-09-27 (t+1)...
+[+] Found 26 flights for horizon t+1 (2026-09-27).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-03 (t+7)...
+[!] Error while scraping 2026-10-03: Page.goto: Timeout 40000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/travel/flights?q=Flights%20to%20HYD%20from%20DEL%20on%202026-10-03%20one%20way", waiting until "networkidle"
+
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-11 (t+15)...
+[+] Found 30 flights for horizon t+15 (2026-10-11).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-26 (t+30)...
+[+] Found 30 flights for horizon t+30 (2026-10-26).
+
+[+] Total flight records collected: 86
+[+] Saved structured JSON: C:\Users\manne\.gemini\antigravity\scratch\airfare-price-index\data\raw_json\flight_prices_DEL_HYD_20260926_090352.json
+[+] Saved tabular CSV:     C:\Users\manne\.gemini\antigravity\scratch\airfare-price-index\data\processed_csv\flight_prices_DEL_HYD_20260926_090352.csv
+
+====================================================================
+ AIRFARE SUMMARY BY HORIZON (DEL -> HYD)
+====================================================================
+Horizon    Days   Flights    Min (INR)      Avg (INR)      Max (INR)     
+--------------------------------------------------------------------
+t+1        1      26         Rs. 8608       Rs. 9227.5     Rs. 10395     
+t+15       15     30         Rs. 7982       Rs. 9361.4     Rs. 21029     
+t+30       30     30         Rs. 7982       Rs. 10530.8    Rs. 18044     
+====================================================================
+
+Run finished at 26-09-2026  9:03:54.13 
+=================================================== 
+Run started at 27-09-2026  9:43:12.51 
+[*] Running scraper with py -3.13... 
+======================================================================
+ STEP 3: AIRFARE PRICE INDEX (CPI AUGMENTATION) CALCULATION
+======================================================================
+[*] Reading dataset from: data/master_flight_prices.csv
+[+] Loaded 893 raw DEL -> HYD flight observations.
+
+[*] Executing Data Cleaning, De-duplication & Fare Decomposition Pipeline...
+[+] Duplicates Removed:          424 records
+[+] Cleaned Flight Observations: 469 records
+[+] Statistical Outliers Flagged:35
+[+] Balanced Panel Flights:      82 flights per date
+[+] Fare Decomposition:          Base: Rs.8,577 (87.5%) | Taxes: Rs.429 (4.4%) | Fees: Rs.800
+[+] Saved Cleaned Airfare DB:    data/cleaned_flight_prices.csv
+[+] Saved Cleaning Audit Report: data/reports/Data_Cleaning_Audit_Report.md
+
+[*] Computing Daily CPI Indices (Dutot, Jevons, DGCA Weighted)...
+[+] Saved Daily Index Summary:   data/reports/cpi_daily_index_summary.csv
+
+[*] Generating high-resolution publication charts...
+[+] Saved: data/plots\daily_cpi_airfare_trend.png
+[+] Saved: data/plots\carrier_price_comparison.png
+[+] Saved DEL -> HYD Dashboard JSON: data/dashboard_data.json
+[+] Saved Dashboard JS Data:      data/dashboard_data.js
+[+] Generated Academic Report:   data/reports/CPI_Airfare_Index_Report.md
+
+======================================================================
+ DAILY INTER-TEMPORAL AIRFARE PRICE INDEX (CPI SUB-INDEX)
+======================================================================
+Date         Flights   Mean (INR)    Dutot      Jevons     Weighted   Change  
+----------------------------------------------------------------------
+2026-09-24   82        Rs. 9478      100.00     100.00     100.00     +0.00%
+2026-09-25   82        Rs. 9186      96.91      96.90      97.20      -2.80%
+2026-09-26   82        Rs. 9375      98.91      98.52      98.64      -1.36%
+2026-09-27   82        Rs. 11390     120.16     115.23     115.74     +15.74%
+======================================================================
+
+====================================================================
+ REAL-TIME AIRFARE PRICE SCRAPER (CPI AUGMENTATION)
+====================================================================
+[*] Route:          DEL -> HYD
+[*] Base Date (t):  2026-09-27 09:43:14
+[*] Target Lead:    t+1, t+7, t+15, t+30
+====================================================================
+
+[*] Scheduled Travel Horizons:
+    - t+1   (in 1  days): 2026-09-28 (Monday)
+    - t+7   (in 7  days): 2026-10-04 (Sunday)
+    - t+15  (in 15 days): 2026-10-12 (Monday)
+    - t+30  (in 30 days): 2026-10-27 (Tuesday)
+
+[*] Scraping DEL -> HYD for 2026-09-28 (t+1)...
+[+] Found 27 flights for horizon t+1 (2026-09-28).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-04 (t+7)...
+[+] Found 32 flights for horizon t+7 (2026-10-04).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-12 (t+15)...
+[+] Found 31 flights for horizon t+15 (2026-10-12).
+[*] Waiting 3 seconds before next horizon request...
+[*] Scraping DEL -> HYD for 2026-10-27 (t+30)...
+[+] Found 32 flights for horizon t+30 (2026-10-27).
+
+[+] Total flight records collected: 122
+[+] Saved structured JSON: C:\Users\kavya\Downloads\KK\airfare-price-index\data\raw_json\flight_prices_DEL_HYD_20260927_094403.json
+[+] Saved tabular CSV:     C:\Users\kavya\Downloads\KK\airfare-price-index\data\processed_csv\flight_prices_DEL_HYD_20260927_094403.csv
+
+====================================================================
+ AIRFARE SUMMARY BY HORIZON (DEL -> HYD)
+====================================================================
+Horizon    Days   Flights    Min (INR)      Avg (INR)      Max (INR)     
+--------------------------------------------------------------------
+t+1        1      27         Rs. 8402       Rs. 10857.7    Rs. 23070     
+t+7        7      32         Rs. 8687       Rs. 13137.9    Rs. 23490     
+t+15       15     31         Rs. 7982       Rs. 9487.6     Rs. 15241     
+t+30       30     32         Rs. 7850       Rs. 9446.5     Rs. 10397     
+====================================================================
+
+[*] Auto-updating CPI price indices and dashboard data...
+[+] Dashboard data successfully updated.
+[*] Updating CPI price indices and syncing dashboard... 
+======================================================================
+ STEP 3: AIRFARE PRICE INDEX (CPI AUGMENTATION) CALCULATION
+======================================================================
+[*] Reading dataset from: data/master_flight_prices.csv
+[+] Loaded 893 raw DEL -> HYD flight observations.
+
+[*] Executing Data Cleaning, De-duplication & Fare Decomposition Pipeline...
+[+] Duplicates Removed:          424 records
+[+] Cleaned Flight Observations: 469 records
+[+] Statistical Outliers Flagged:35
+[+] Balanced Panel Flights:      82 flights per date
+[+] Fare Decomposition:          Base: Rs.8,577 (87.5%) | Taxes: Rs.429 (4.4%) | Fees: Rs.800
+[+] Saved Cleaned Airfare DB:    data/cleaned_flight_prices.csv
+[+] Saved Cleaning Audit Report: data/reports/Data_Cleaning_Audit_Report.md
+
+[*] Computing Daily CPI Indices (Dutot, Jevons, DGCA Weighted)...
+[+] Saved Daily Index Summary:   data/reports/cpi_daily_index_summary.csv
+
+[*] Generating high-resolution publication charts...
+[+] Saved: data/plots\daily_cpi_airfare_trend.png
+[+] Saved: data/plots\carrier_price_comparison.png
+[+] Saved DEL -> HYD Dashboard JSON: data/dashboard_data.json
+[+] Saved Dashboard JS Data:      data/dashboard_data.js
+[+] Generated Academic Report:   data/reports/CPI_Airfare_Index_Report.md
+
+======================================================================
+ DAILY INTER-TEMPORAL AIRFARE PRICE INDEX (CPI SUB-INDEX)
+======================================================================
+Date         Flights   Mean (INR)    Dutot      Jevons     Weighted   Change  
+----------------------------------------------------------------------
+2026-09-24   82        Rs. 9478      100.00     100.00     100.00     +0.00%
+2026-09-25   82        Rs. 9186      96.91      96.90      97.20      -2.80%
+2026-09-26   82        Rs. 9375      98.91      98.52      98.64      -1.36%
+2026-09-27   82        Rs. 11390     120.16     115.23     115.74     +15.74%
+======================================================================
+
+Run finished at 27-09-2026  9:44:11.72 
+=================================================== 

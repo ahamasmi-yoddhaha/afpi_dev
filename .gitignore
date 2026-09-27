@@ -12,8 +12,9 @@ ENV/
 env/
 
 # Logs
-*.log
-data/scheduler_output.log
+# *.log
+!data/scheduler_output.log
+!logs/*.log
 
 # Playwright
 .playwright/

@@ -25,4 +25,6 @@ echo [*] Updating CPI price indices and syncing dashboard... >> data\scheduler_o
 
 echo Run finished at %date% %time% >> data\scheduler_output.log
 echo =================================================== >> data\scheduler_output.log
+if not exist logs mkdir logs
+copy /y data\scheduler_output.log logs\scheduler_output.log >nul
 endlocal
