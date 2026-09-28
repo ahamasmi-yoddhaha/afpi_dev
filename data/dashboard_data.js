@@ -4,12 +4,12 @@ window.DASHBOARD_DATA = {
   "origin": "DEL",
   "destination": "HYD",
   "kpis": {
-    "total_flights": 586,
+    "total_flights": 588,
     "days_tracked": 5,
-    "latest_index": 100.54,
-    "inflation_pct": 0.54,
-    "mean_fare": 9741.0,
-    "mean_base_fare": 8516.0,
+    "latest_index": 100.51,
+    "inflation_pct": 0.51,
+    "mean_fare": 9746.0,
+    "mean_base_fare": 8520.0,
     "mean_taxes": 426.0,
     "mean_fees": 800.0,
     "min_fare": 7850.0,
@@ -51,26 +51,26 @@ window.DASHBOARD_DATA = {
     },
     {
       "date": "2026-09-28",
-      "dutot": 100.48,
-      "jevons": 100.24,
-      "weighted": 100.54,
-      "mean_fare": 9577.0,
+      "dutot": 100.42,
+      "jevons": 100.18,
+      "weighted": 100.51,
+      "mean_fare": 9571.0,
       "flights": 78
     }
   ],
   "carriers": [
     {
       "carrier": "IndiGo",
-      "avg_price": 9632.0,
+      "avg_price": 9623.0,
       "min_price": 7850.0,
       "max_price": 22676.0,
-      "flights": 316,
+      "flights": 318,
       "market_share": 61.0,
       "has_data": true
     },
     {
       "carrier": "Air India",
-      "avg_price": 9846.0,
+      "avg_price": 9870.0,
       "min_price": 8675.0,
       "max_price": 23490.0,
       "flights": 230,
@@ -79,7 +79,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "carrier": "Akasa Air",
-      "avg_price": 10002.0,
+      "avg_price": 10015.0,
       "min_price": 8297.0,
       "max_price": 21029.0,
       "flights": 40,
@@ -290,12 +290,12 @@ window.DASHBOARD_DATA = {
   "data": {
     "DEL -> HYD": {
       "kpis": {
-        "total_flights": 586,
+        "total_flights": 588,
         "days_tracked": 5,
-        "latest_index": 100.54,
-        "inflation_pct": 0.54,
-        "mean_fare": 9741.0,
-        "mean_base_fare": 8516.0,
+        "latest_index": 100.51,
+        "inflation_pct": 0.51,
+        "mean_fare": 9746.0,
+        "mean_base_fare": 8520.0,
         "mean_taxes": 426.0,
         "mean_fees": 800.0,
         "min_fare": 7850.0,
@@ -337,26 +337,26 @@ window.DASHBOARD_DATA = {
         },
         {
           "date": "2026-09-28",
-          "dutot": 100.48,
-          "jevons": 100.24,
-          "weighted": 100.54,
-          "mean_fare": 9577.0,
+          "dutot": 100.42,
+          "jevons": 100.18,
+          "weighted": 100.51,
+          "mean_fare": 9571.0,
           "flights": 78
         }
       ],
       "carriers": [
         {
           "carrier": "IndiGo",
-          "avg_price": 9632.0,
+          "avg_price": 9623.0,
           "min_price": 7850.0,
           "max_price": 22676.0,
-          "flights": 316,
+          "flights": 318,
           "market_share": 61.0,
           "has_data": true
         },
         {
           "carrier": "Air India",
-          "avg_price": 9846.0,
+          "avg_price": 9870.0,
           "min_price": 8675.0,
           "max_price": 23490.0,
           "flights": 230,
@@ -365,7 +365,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "carrier": "Akasa Air",
-          "avg_price": 10002.0,
+          "avg_price": 10015.0,
           "min_price": 8297.0,
           "max_price": 21029.0,
           "flights": 40,
@@ -572,5 +572,5 @@ window.DASHBOARD_DATA = {
       ]
     }
   },
-  "last_updated": "2026-09-28 10:42:51"
+  "last_updated": "2026-09-28 10:04:02"
 };
