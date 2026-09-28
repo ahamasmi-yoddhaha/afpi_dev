@@ -57,6 +57,7 @@ class FlightScraper:
         url = (
             f"https://www.google.com/travel/flights?q="
             f"Flights%20to%20{destination}%20from%20{origin}%20on%20{travel_date_iso}%20one%20way"
+            f"&hl=en&gl=IN&curr=INR"
         )
         print(f"[*] Scraping {origin} -> {destination} for {travel_date_iso} ({horizon_label})...")
 
@@ -79,15 +80,38 @@ class FlightScraper:
                     "Chrome/124.0.0.0 Safari/537.36"
                 ),
                 locale="en-IN",
+                extra_http_headers={"Accept-Language": "en-IN,en;q=0.9"},
             )
             page = context.new_page()
 
             try:
-                page.goto(url, timeout=40000, wait_until="networkidle")
+                try:
+                    page.goto(url, timeout=40000, wait_until="domcontentloaded")
+                except Exception as nav_e:
+                    print(f"[*] Initial navigation notice: {nav_e}")
+
+                page.wait_for_timeout(2000)
+
+                # Dismiss Google consent modal if presented in cloud / international IP environments
+                for btn_text in ["Accept all", "I agree", "Agree", "Tout accepter", "Alle akzeptieren"]:
+                    try:
+                        btn = page.locator(f"button:has-text('{btn_text}')")
+                        if btn.count() > 0 and btn.first.is_visible():
+                            btn.first.click()
+                            page.wait_for_timeout(2000)
+                            break
+                    except Exception:
+                        pass
+
+                try:
+                    page.wait_for_load_state("networkidle", timeout=12000)
+                except Exception:
+                    pass
+
                 page.wait_for_timeout(3000)
                 body_text = page.inner_text("body")
 
-                # Pattern matching flight blocks
+                # Pattern matching flight blocks with flexible currency symbols (₹, Rs, INR)
                 pattern = re.compile(
                     r"(\d{1,2}:\d{2}\s*(?:AM|PM))\s*[–\-]\s*(\d{1,2}:\d{2}\s*(?:AM|PM)(?:\+\d)?)\s*\n"
                     r"([A-Za-z0-9\s]+?)\s*\n"
@@ -95,7 +119,7 @@ class FlightScraper:
                     r"(?:[A-Z]{3}[–\-][A-Z]{3})\s*\n"
                     r"(Nonstop|\d+\s*stop(?:s)?)\s*\n"
                     r"(?:.*?\n)*?"
-                    r"₹\s*([\d,]+)",
+                    r"(?:₹|Rs\.?|INR)\s*([\d,]+)",
                     re.MULTILINE,
                 )
 

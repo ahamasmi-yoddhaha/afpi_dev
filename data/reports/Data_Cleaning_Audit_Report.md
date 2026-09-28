@@ -1,7 +1,7 @@
 # Airfare Database Data Cleaning & Standardisation Audit Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27  
+**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28  
 **Pipeline Execution:** Completed Successfully  
 
 ---
@@ -10,12 +10,12 @@
 
 | Metric | Count | Percentage |
 | :--- | :--- | :--- |
-| **Raw Scraped Observations** | **893** | 100.0% |
+| **Raw Scraped Observations** | **1,010** | 100.0% |
 | **Invalid / Missing Values Handled** | 0 | 0.0% |
-| **Duplicate Scrapes Removed** | 424 | 47.5% |
-| **Cleaned & De-duplicated Records** | **469** | **52.5%** |
-| **Statistical Outliers Flagged** | 35 | 7.5% |
-| **Strictly Balanced Panel Flights (All Dates)** | **82 per date** | — |
+| **Duplicate Scrapes Removed** | 424 | 42.0% |
+| **Cleaned & De-duplicated Records** | **586** | **58.0%** |
+| **Statistical Outliers Flagged** | 36 | 6.1% |
+| **Strictly Balanced Panel Flights (All Dates)** | **78 per date** | — |
 
 ---
 
@@ -29,11 +29,11 @@ In accordance with Indian Ministry of Civil Aviation (MoCA) and DGCA tariff guid
 
 | Component | Average Value (INR) | Share of Total Airfare |
 | :--- | :--- | :--- |
-| **Base Fare** | **Rs. 8,577.27** | **87.5%** |
-| **Taxes (GST 5%)** | Rs. 428.86 | 4.4% |
+| **Base Fare** | **Rs. 8,515.71** | **87.4%** |
+| **Taxes (GST 5%)** | Rs. 425.79 | 4.4% |
 | **Airport UDF & ASF Fee** | Rs. 450.00 | 4.6% |
 | **Convenience / Web Fee** | Rs. 350.00 | 3.6% |
-| **Total Gross Airfare** | **Rs. 9,806.13** | **100.0%** |
+| **Total Gross Airfare** | **Rs. 9,741.50** | **100.0%** |
 
 ---
 
@@ -46,6 +46,7 @@ The table below tracks flight service attrition (depleted seats / cancelled flig
 | 2026-09-24 &rarr; 2026-09-25 | 114 | 24 | 25 | 90 |
 | 2026-09-25 &rarr; 2026-09-26 | 115 | 8 | 11 | 107 |
 | 2026-09-26 &rarr; 2026-09-27 | 118 | 9 | 13 | 109 |
+| 2026-09-27 &rarr; 2026-09-28 | 122 | 15 | 10 | 107 |
 
 ---
 

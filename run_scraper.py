@@ -85,7 +85,7 @@ def main():
 
     if not all_flight_records:
         print("[!] No records scraped. Please check network connectivity or try running with --no-headless.")
-        return
+        sys.exit(1)
 
     # 3. Export to JSON
     timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
