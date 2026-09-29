@@ -10,10 +10,10 @@
 
 | Metric | Count | Percentage |
 | :--- | :--- | :--- |
-| **Raw Scraped Observations** | **1,229** | 100.0% |
+| **Raw Scraped Observations** | **1,339** | 100.0% |
 | **Invalid / Missing Values Handled** | 0 | 0.0% |
-| **Duplicate Scrapes Removed** | 528 | 43.0% |
-| **Cleaned & De-duplicated Records** | **701** | **57.0%** |
+| **Duplicate Scrapes Removed** | 638 | 47.6% |
+| **Cleaned & De-duplicated Records** | **701** | **52.4%** |
 | **Statistical Outliers Flagged** | 40 | 5.7% |
 | **Strictly Balanced Panel Flights (All Dates)** | **73 per date** | — |
 
@@ -29,11 +29,11 @@ In accordance with Indian Ministry of Civil Aviation (MoCA) and DGCA tariff guid
 
 | Component | Average Value (INR) | Share of Total Airfare |
 | :--- | :--- | :--- |
-| **Base Fare** | **Rs. 8,464.41** | **87.4%** |
-| **Taxes (GST 5%)** | Rs. 423.22 | 4.4% |
+| **Base Fare** | **Rs. 8,465.11** | **87.4%** |
+| **Taxes (GST 5%)** | Rs. 423.26 | 4.4% |
 | **Airport UDF & ASF Fee** | Rs. 450.00 | 4.6% |
 | **Convenience / Web Fee** | Rs. 350.00 | 3.6% |
-| **Total Gross Airfare** | **Rs. 9,687.64** | **100.0%** |
+| **Total Gross Airfare** | **Rs. 9,688.36** | **100.0%** |
 
 ---
 

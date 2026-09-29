@@ -6,10 +6,10 @@ window.DASHBOARD_DATA = {
   "kpis": {
     "total_flights": 701,
     "days_tracked": 6,
-    "latest_index": 97.87,
-    "inflation_pct": -2.13,
+    "latest_index": 97.93,
+    "inflation_pct": -2.07,
     "mean_fare": 9688.0,
-    "mean_base_fare": 8464.0,
+    "mean_base_fare": 8465.0,
     "mean_taxes": 423.0,
     "mean_fees": 800.0,
     "min_fare": 7850.0,
@@ -59,10 +59,10 @@ window.DASHBOARD_DATA = {
     },
     {
       "date": "2026-09-29",
-      "dutot": 97.23,
-      "jevons": 97.3,
-      "weighted": 97.87,
-      "mean_fare": 9282.0,
+      "dutot": 97.3,
+      "jevons": 97.37,
+      "weighted": 97.93,
+      "mean_fare": 9289.0,
       "flights": 73
     }
   ],
@@ -78,7 +78,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "carrier": "Air India",
-      "avg_price": 9811.0,
+      "avg_price": 9813.0,
       "min_price": 8675.0,
       "max_price": 23490.0,
       "flights": 274,
@@ -87,7 +87,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "carrier": "Akasa Air",
-      "avg_price": 9906.0,
+      "avg_price": 9911.0,
       "min_price": 8297.0,
       "max_price": 21029.0,
       "flights": 48,
@@ -300,10 +300,10 @@ window.DASHBOARD_DATA = {
       "kpis": {
         "total_flights": 701,
         "days_tracked": 6,
-        "latest_index": 97.87,
-        "inflation_pct": -2.13,
+        "latest_index": 97.93,
+        "inflation_pct": -2.07,
         "mean_fare": 9688.0,
-        "mean_base_fare": 8464.0,
+        "mean_base_fare": 8465.0,
         "mean_taxes": 423.0,
         "mean_fees": 800.0,
         "min_fare": 7850.0,
@@ -353,10 +353,10 @@ window.DASHBOARD_DATA = {
         },
         {
           "date": "2026-09-29",
-          "dutot": 97.23,
-          "jevons": 97.3,
-          "weighted": 97.87,
-          "mean_fare": 9282.0,
+          "dutot": 97.3,
+          "jevons": 97.37,
+          "weighted": 97.93,
+          "mean_fare": 9289.0,
           "flights": 73
         }
       ],
@@ -372,7 +372,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "carrier": "Air India",
-          "avg_price": 9811.0,
+          "avg_price": 9813.0,
           "min_price": 8675.0,
           "max_price": 23490.0,
           "flights": 274,
@@ -381,7 +381,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "carrier": "Akasa Air",
-          "avg_price": 9906.0,
+          "avg_price": 9911.0,
           "min_price": 8297.0,
           "max_price": 21029.0,
           "flights": 48,
@@ -588,5 +588,5 @@ window.DASHBOARD_DATA = {
       ]
     }
   },
-  "last_updated": "2026-09-29 09:29:05"
+  "last_updated": "2026-09-29 10:02:44"
 };
