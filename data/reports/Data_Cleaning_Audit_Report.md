@@ -10,11 +10,11 @@
 
 | Metric | Count | Percentage |
 | :--- | :--- | :--- |
-| **Raw Scraped Observations** | **1,010** | 100.0% |
+| **Raw Scraped Observations** | **1,119** | 100.0% |
 | **Invalid / Missing Values Handled** | 0 | 0.0% |
-| **Duplicate Scrapes Removed** | 424 | 42.0% |
-| **Cleaned & De-duplicated Records** | **586** | **58.0%** |
-| **Statistical Outliers Flagged** | 36 | 6.1% |
+| **Duplicate Scrapes Removed** | 528 | 47.2% |
+| **Cleaned & De-duplicated Records** | **591** | **52.8%** |
+| **Statistical Outliers Flagged** | 38 | 6.4% |
 | **Strictly Balanced Panel Flights (All Dates)** | **78 per date** | — |
 
 ---
@@ -29,11 +29,11 @@ In accordance with Indian Ministry of Civil Aviation (MoCA) and DGCA tariff guid
 
 | Component | Average Value (INR) | Share of Total Airfare |
 | :--- | :--- | :--- |
-| **Base Fare** | **Rs. 8,515.71** | **87.4%** |
-| **Taxes (GST 5%)** | Rs. 425.79 | 4.4% |
+| **Base Fare** | **Rs. 8,525.79** | **87.4%** |
+| **Taxes (GST 5%)** | Rs. 426.29 | 4.4% |
 | **Airport UDF & ASF Fee** | Rs. 450.00 | 4.6% |
 | **Convenience / Web Fee** | Rs. 350.00 | 3.6% |
-| **Total Gross Airfare** | **Rs. 9,741.50** | **100.0%** |
+| **Total Gross Airfare** | **Rs. 9,752.08** | **100.0%** |
 
 ---
 
@@ -46,7 +46,7 @@ The table below tracks flight service attrition (depleted seats / cancelled flig
 | 2026-09-24 &rarr; 2026-09-25 | 114 | 24 | 25 | 90 |
 | 2026-09-25 &rarr; 2026-09-26 | 115 | 8 | 11 | 107 |
 | 2026-09-26 &rarr; 2026-09-27 | 118 | 9 | 13 | 109 |
-| 2026-09-27 &rarr; 2026-09-28 | 122 | 15 | 10 | 107 |
+| 2026-09-27 &rarr; 2026-09-28 | 122 | 15 | 15 | 107 |
 
 ---
 
