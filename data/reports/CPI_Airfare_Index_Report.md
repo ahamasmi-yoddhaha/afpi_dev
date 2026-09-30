@@ -2,10 +2,10 @@
 ## Empirical Research Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Generated:** 2026-09-29 10:02:44  
+**Generated:** 2026-09-30 09:55:21  
 **Base Observation Date ($t_0$):** 2026-09-24  
-**Latest Observation Date ($t$):** 2026-09-29  
-**Net Airfare Price Movement:** -2.07%  
+**Latest Observation Date ($t$):** 2026-09-30  
+**Net Airfare Price Movement:** +1.55%  
 
 ---
 
@@ -19,12 +19,13 @@ The table below tracks day-over-day price evolution across observation dates:
 
 | Observation Date | Sample Size | Mean Fare (INR) | Weighted Fare (INR) | Dutot Index | Jevons Index | DGCA Weighted Index | Inflation vs Base |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-09-24 | 73 | Rs. 9,546.56 | Rs. 9,544.90 | 100.00 | 100.00 | **100.00** | +0.00% |
-| 2026-09-25 | 73 | Rs. 9,227.18 | Rs. 9,257.78 | 96.65 | 96.61 | **96.90** | -3.10% |
-| 2026-09-26 | 73 | Rs. 9,468.63 | Rs. 9,429.39 | 99.18 | 98.73 | **98.62** | -1.38% |
-| 2026-09-27 | 73 | Rs. 11,440.08 | Rs. 11,503.04 | 119.83 | 115.17 | **116.04** | +16.04% |
-| 2026-09-28 | 73 | Rs. 9,520.33 | Rs. 9,546.85 | 99.72 | 99.49 | **99.98** | -0.02% |
-| 2026-09-29 | 73 | Rs. 9,289.33 | Rs. 9,324.04 | 97.30 | 97.37 | **97.93** | -2.07% |
+| 2026-09-24 | 70 | Rs. 9,509.76 | Rs. 9,510.76 | 100.00 | 100.00 | **100.00** | +0.00% |
+| 2026-09-25 | 70 | Rs. 9,249.43 | Rs. 9,269.20 | 97.26 | 97.14 | **97.31** | -2.69% |
+| 2026-09-26 | 70 | Rs. 9,496.66 | Rs. 9,438.72 | 99.86 | 99.31 | **99.00** | -1.00% |
+| 2026-09-27 | 70 | Rs. 11,494.61 | Rs. 11,551.32 | 120.87 | 116.00 | **116.76** | +16.76% |
+| 2026-09-28 | 70 | Rs. 9,541.38 | Rs. 9,562.46 | 100.33 | 99.99 | **100.42** | +0.42% |
+| 2026-09-29 | 70 | Rs. 9,309.03 | Rs. 9,329.73 | 97.88 | 97.86 | **98.28** | -1.72% |
+| 2026-09-30 | 70 | Rs. 9,691.14 | Rs. 9,697.38 | 101.90 | 101.17 | **101.55** | +1.55% |
 
 > **Methodology Notes:**
 > - **Dutot Index**: Ratio of arithmetic mean prices ($ar{P}_t / ar{P}_0 	imes 100$).
