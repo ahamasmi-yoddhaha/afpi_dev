@@ -1,7 +1,7 @@
 # Airfare Database Data Cleaning & Standardisation Audit Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28, 2026-09-29, 2026-09-30, 2026-10-01  
+**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28, 2026-09-29, 2026-09-30, 2026-10-01, 2026-10-02  
 **Pipeline Execution:** Completed Successfully  
 
 ---
@@ -10,12 +10,12 @@
 
 | Metric | Count | Percentage |
 | :--- | :--- | :--- |
-| **Raw Scraped Observations** | **1,550** | 100.0% |
+| **Raw Scraped Observations** | **1,648** | 100.0% |
 | **Invalid / Missing Values Handled** | 0 | 0.0% |
-| **Duplicate Scrapes Removed** | 638 | 41.2% |
-| **Cleaned & De-duplicated Records** | **912** | **58.8%** |
-| **Statistical Outliers Flagged** | 49 | 5.4% |
-| **Strictly Balanced Panel Flights (All Dates)** | **68 per date** | — |
+| **Duplicate Scrapes Removed** | 638 | 38.7% |
+| **Cleaned & De-duplicated Records** | **1,010** | **61.3%** |
+| **Statistical Outliers Flagged** | 56 | 5.5% |
+| **Strictly Balanced Panel Flights (All Dates)** | **66 per date** | — |
 
 ---
 
@@ -29,11 +29,11 @@ In accordance with Indian Ministry of Civil Aviation (MoCA) and DGCA tariff guid
 
 | Component | Average Value (INR) | Share of Total Airfare |
 | :--- | :--- | :--- |
-| **Base Fare** | **Rs. 8,444.37** | **87.4%** |
-| **Taxes (GST 5%)** | Rs. 422.22 | 4.4% |
-| **Airport UDF & ASF Fee** | Rs. 450.00 | 4.7% |
+| **Base Fare** | **Rs. 8,504.05** | **87.4%** |
+| **Taxes (GST 5%)** | Rs. 425.20 | 4.4% |
+| **Airport UDF & ASF Fee** | Rs. 450.00 | 4.6% |
 | **Convenience / Web Fee** | Rs. 350.00 | 3.6% |
-| **Total Gross Airfare** | **Rs. 9,666.59** | **100.0%** |
+| **Total Gross Airfare** | **Rs. 9,729.26** | **100.0%** |
 
 ---
 
@@ -50,6 +50,7 @@ The table below tracks flight service attrition (depleted seats / cancelled flig
 | 2026-09-28 &rarr; 2026-09-29 | 122 | 23 | 11 | 99 |
 | 2026-09-29 &rarr; 2026-09-30 | 110 | 13 | 13 | 97 |
 | 2026-09-30 &rarr; 2026-10-01 | 110 | 12 | 3 | 98 |
+| 2026-10-01 &rarr; 2026-10-02 | 101 | 5 | 2 | 96 |
 
 ---
 
