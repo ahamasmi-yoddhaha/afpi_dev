@@ -4,17 +4,17 @@ window.DASHBOARD_DATA = {
   "origin": "DEL",
   "destination": "HYD",
   "kpis": {
-    "total_flights": 790,
-    "days_tracked": 7,
-    "latest_index": 106.64,
-    "inflation_pct": 6.64,
-    "mean_fare": 9810.0,
-    "mean_base_fare": 8581.0,
-    "mean_taxes": 429.0,
+    "total_flights": 889,
+    "days_tracked": 8,
+    "latest_index": 120.64,
+    "inflation_pct": 20.64,
+    "mean_fare": 10007.0,
+    "mean_base_fare": 8769.0,
+    "mean_taxes": 438.0,
     "mean_fees": 800.0,
     "min_fare": 7850.0,
     "max_fare": 23490.0,
-    "balanced_panel_flights": 68
+    "balanced_panel_flights": 67
   },
   "daily_trend": [
     {
@@ -22,83 +22,91 @@ window.DASHBOARD_DATA = {
       "dutot": 100.0,
       "jevons": 100.0,
       "weighted": 100.0,
-      "mean_fare": 9494.0,
-      "flights": 68
+      "mean_fare": 9504.0,
+      "flights": 67
     },
     {
       "date": "2026-09-25",
-      "dutot": 97.47,
-      "jevons": 97.34,
-      "weighted": 97.48,
-      "mean_fare": 9253.0,
-      "flights": 68
+      "dutot": 97.44,
+      "jevons": 97.31,
+      "weighted": 97.45,
+      "mean_fare": 9260.0,
+      "flights": 67
     },
     {
       "date": "2026-09-26",
-      "dutot": 100.17,
-      "jevons": 99.59,
-      "weighted": 99.21,
-      "mean_fare": 9510.0,
-      "flights": 68
+      "dutot": 100.14,
+      "jevons": 99.56,
+      "weighted": 99.16,
+      "mean_fare": 9517.0,
+      "flights": 67
     },
     {
       "date": "2026-09-27",
-      "dutot": 119.99,
-      "jevons": 115.55,
-      "weighted": 116.36,
-      "mean_fare": 11391.0,
-      "flights": 68
+      "dutot": 120.12,
+      "jevons": 115.64,
+      "weighted": 116.45,
+      "mean_fare": 11415.0,
+      "flights": 67
     },
     {
       "date": "2026-09-28",
-      "dutot": 100.67,
-      "jevons": 100.32,
-      "weighted": 100.73,
-      "mean_fare": 9558.0,
-      "flights": 68
+      "dutot": 100.45,
+      "jevons": 100.09,
+      "weighted": 100.53,
+      "mean_fare": 9546.0,
+      "flights": 67
     },
     {
       "date": "2026-10-01",
-      "dutot": 100.96,
-      "jevons": 100.56,
-      "weighted": 100.9,
-      "mean_fare": 9584.0,
-      "flights": 68
+      "dutot": 99.74,
+      "jevons": 99.62,
+      "weighted": 100.02,
+      "mean_fare": 9479.0,
+      "flights": 67
     },
     {
       "date": "2026-10-02",
-      "dutot": 107.6,
-      "jevons": 106.48,
-      "weighted": 106.64,
-      "mean_fare": 10215.0,
-      "flights": 68
+      "dutot": 106.86,
+      "jevons": 105.82,
+      "weighted": 106.06,
+      "mean_fare": 10156.0,
+      "flights": 67
+    },
+    {
+      "date": "2026-10-03",
+      "dutot": 123.79,
+      "jevons": 120.11,
+      "weighted": 120.64,
+      "mean_fare": 11764.0,
+      "flights": 67
     }
   ],
   "carriers": [
     {
       "carrier": "IndiGo",
-      "avg_price": 9662.0,
+      "avg_price": 9870.0,
       "min_price": 7850.0,
       "max_price": 22676.0,
-      "flights": 424,
+      "flights": 476,
       "market_share": 61.0,
       "has_data": true
     },
     {
       "carrier": "Air India",
-      "avg_price": 9988.0,
+      "avg_price": 10188.0,
       "min_price": 8675.0,
       "max_price": 23490.0,
-      "flights": 310,
+      "flights": 349,
       "market_share": 27.0,
       "has_data": true
     },
     {
       "carrier": "Akasa Air",
-      "avg_price": 9933.0,
+      "avg_price": 10040.0,
       "min_price": 8297.0,
       "max_price": 21029.0,
-      "flights": 56,
+      "flights": 64,
       "market_share": 4.5,
       "has_data": true
     }
@@ -106,33 +114,33 @@ window.DASHBOARD_DATA = {
   "recent_flights": [
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "Akasa Air",
       "departure_time": "2:10 PM",
       "arrival_time": "4:30 PM",
       "duration": "2h 20m",
       "stops": 0,
-      "price_inr": 9527.0,
-      "base_fare_inr": 8311.43,
-      "taxes_inr": 415.57,
+      "price_inr": 9200.0,
+      "base_fare_inr": 8000.0,
+      "taxes_inr": 400.0,
       "route": "DEL -> HYD"
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "Akasa Air",
       "departure_time": "8:40 PM",
       "arrival_time": "11:10 PM",
       "duration": "2h 30m",
       "stops": 0,
-      "price_inr": 10401.0,
-      "base_fare_inr": 9143.81,
-      "taxes_inr": 457.19,
+      "price_inr": 9200.0,
+      "base_fare_inr": 8000.0,
+      "taxes_inr": 400.0,
       "route": "DEL -> HYD"
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "11:15 PM",
       "arrival_time": "1:30 AM+1",
@@ -145,23 +153,10 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "11:45 AM",
       "arrival_time": "2:00 PM",
-      "duration": "2h 15m",
-      "stops": 0,
-      "price_inr": 10966.0,
-      "base_fare_inr": 9681.9,
-      "taxes_inr": 484.1,
-      "route": "DEL -> HYD"
-    },
-    {
-      "horizon": "t+7",
-      "travel_date": "2026-10-09",
-      "airline": "IndiGo",
-      "departure_time": "1:30 PM",
-      "arrival_time": "3:45 PM",
       "duration": "2h 15m",
       "stops": 0,
       "price_inr": 8874.0,
@@ -171,7 +166,20 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
+      "airline": "IndiGo",
+      "departure_time": "1:30 PM",
+      "arrival_time": "3:45 PM",
+      "duration": "2h 15m",
+      "stops": 0,
+      "price_inr": 9350.0,
+      "base_fare_inr": 8142.86,
+      "taxes_inr": 407.14,
+      "route": "DEL -> HYD"
+    },
+    {
+      "horizon": "t+7",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "2:25 AM",
       "arrival_time": "4:40 AM",
@@ -184,7 +192,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "2:45 PM",
       "arrival_time": "5:05 PM",
@@ -197,7 +205,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "4:15 PM",
       "arrival_time": "6:30 PM",
@@ -210,7 +218,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "5:30 AM",
       "arrival_time": "7:50 AM",
@@ -223,7 +231,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "5:55 PM",
       "arrival_time": "8:15 PM",
@@ -236,7 +244,7 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "7:10 AM",
       "arrival_time": "9:20 AM",
@@ -249,54 +257,54 @@ window.DASHBOARD_DATA = {
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "7:45 PM",
       "arrival_time": "10:05 PM",
       "duration": "2h 20m",
       "stops": 0,
-      "price_inr": 10395.0,
-      "base_fare_inr": 9138.1,
-      "taxes_inr": 456.9,
+      "price_inr": 8874.0,
+      "base_fare_inr": 7689.52,
+      "taxes_inr": 384.48,
       "route": "DEL -> HYD"
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "8:30 AM",
       "arrival_time": "10:45 AM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9350.0,
-      "base_fare_inr": 8142.86,
-      "taxes_inr": 407.14,
+      "price_inr": 8874.0,
+      "base_fare_inr": 7689.52,
+      "taxes_inr": 384.48,
       "route": "DEL -> HYD"
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "9:00 PM",
       "arrival_time": "11:15 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 10395.0,
-      "base_fare_inr": 9138.1,
-      "taxes_inr": 456.9,
+      "price_inr": 8874.0,
+      "base_fare_inr": 7689.52,
+      "taxes_inr": 384.48,
       "route": "DEL -> HYD"
     },
     {
       "horizon": "t+7",
-      "travel_date": "2026-10-09",
+      "travel_date": "2026-10-10",
       "airline": "IndiGo",
       "departure_time": "9:55 AM",
       "arrival_time": "12:20 PM",
       "duration": "2h 25m",
       "stops": 0,
-      "price_inr": 9350.0,
-      "base_fare_inr": 8142.86,
-      "taxes_inr": 407.14,
+      "price_inr": 8874.0,
+      "base_fare_inr": 7689.52,
+      "taxes_inr": 384.48,
       "route": "DEL -> HYD"
     }
   ],
@@ -306,17 +314,17 @@ window.DASHBOARD_DATA = {
   "data": {
     "DEL -> HYD": {
       "kpis": {
-        "total_flights": 790,
-        "days_tracked": 7,
-        "latest_index": 106.64,
-        "inflation_pct": 6.64,
-        "mean_fare": 9810.0,
-        "mean_base_fare": 8581.0,
-        "mean_taxes": 429.0,
+        "total_flights": 889,
+        "days_tracked": 8,
+        "latest_index": 120.64,
+        "inflation_pct": 20.64,
+        "mean_fare": 10007.0,
+        "mean_base_fare": 8769.0,
+        "mean_taxes": 438.0,
         "mean_fees": 800.0,
         "min_fare": 7850.0,
         "max_fare": 23490.0,
-        "balanced_panel_flights": 68
+        "balanced_panel_flights": 67
       },
       "daily_trend": [
         {
@@ -324,83 +332,91 @@ window.DASHBOARD_DATA = {
           "dutot": 100.0,
           "jevons": 100.0,
           "weighted": 100.0,
-          "mean_fare": 9494.0,
-          "flights": 68
+          "mean_fare": 9504.0,
+          "flights": 67
         },
         {
           "date": "2026-09-25",
-          "dutot": 97.47,
-          "jevons": 97.34,
-          "weighted": 97.48,
-          "mean_fare": 9253.0,
-          "flights": 68
+          "dutot": 97.44,
+          "jevons": 97.31,
+          "weighted": 97.45,
+          "mean_fare": 9260.0,
+          "flights": 67
         },
         {
           "date": "2026-09-26",
-          "dutot": 100.17,
-          "jevons": 99.59,
-          "weighted": 99.21,
-          "mean_fare": 9510.0,
-          "flights": 68
+          "dutot": 100.14,
+          "jevons": 99.56,
+          "weighted": 99.16,
+          "mean_fare": 9517.0,
+          "flights": 67
         },
         {
           "date": "2026-09-27",
-          "dutot": 119.99,
-          "jevons": 115.55,
-          "weighted": 116.36,
-          "mean_fare": 11391.0,
-          "flights": 68
+          "dutot": 120.12,
+          "jevons": 115.64,
+          "weighted": 116.45,
+          "mean_fare": 11415.0,
+          "flights": 67
         },
         {
           "date": "2026-09-28",
-          "dutot": 100.67,
-          "jevons": 100.32,
-          "weighted": 100.73,
-          "mean_fare": 9558.0,
-          "flights": 68
+          "dutot": 100.45,
+          "jevons": 100.09,
+          "weighted": 100.53,
+          "mean_fare": 9546.0,
+          "flights": 67
         },
         {
           "date": "2026-10-01",
-          "dutot": 100.96,
-          "jevons": 100.56,
-          "weighted": 100.9,
-          "mean_fare": 9584.0,
-          "flights": 68
+          "dutot": 99.74,
+          "jevons": 99.62,
+          "weighted": 100.02,
+          "mean_fare": 9479.0,
+          "flights": 67
         },
         {
           "date": "2026-10-02",
-          "dutot": 107.6,
-          "jevons": 106.48,
-          "weighted": 106.64,
-          "mean_fare": 10215.0,
-          "flights": 68
+          "dutot": 106.86,
+          "jevons": 105.82,
+          "weighted": 106.06,
+          "mean_fare": 10156.0,
+          "flights": 67
+        },
+        {
+          "date": "2026-10-03",
+          "dutot": 123.79,
+          "jevons": 120.11,
+          "weighted": 120.64,
+          "mean_fare": 11764.0,
+          "flights": 67
         }
       ],
       "carriers": [
         {
           "carrier": "IndiGo",
-          "avg_price": 9662.0,
+          "avg_price": 9870.0,
           "min_price": 7850.0,
           "max_price": 22676.0,
-          "flights": 424,
+          "flights": 476,
           "market_share": 61.0,
           "has_data": true
         },
         {
           "carrier": "Air India",
-          "avg_price": 9988.0,
+          "avg_price": 10188.0,
           "min_price": 8675.0,
           "max_price": 23490.0,
-          "flights": 310,
+          "flights": 349,
           "market_share": 27.0,
           "has_data": true
         },
         {
           "carrier": "Akasa Air",
-          "avg_price": 9933.0,
+          "avg_price": 10040.0,
           "min_price": 8297.0,
           "max_price": 21029.0,
-          "flights": 56,
+          "flights": 64,
           "market_share": 4.5,
           "has_data": true
         }
@@ -408,33 +424,33 @@ window.DASHBOARD_DATA = {
       "recent_flights": [
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "Akasa Air",
           "departure_time": "2:10 PM",
           "arrival_time": "4:30 PM",
           "duration": "2h 20m",
           "stops": 0,
-          "price_inr": 9527.0,
-          "base_fare_inr": 8311.43,
-          "taxes_inr": 415.57,
+          "price_inr": 9200.0,
+          "base_fare_inr": 8000.0,
+          "taxes_inr": 400.0,
           "route": "DEL -> HYD"
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "Akasa Air",
           "departure_time": "8:40 PM",
           "arrival_time": "11:10 PM",
           "duration": "2h 30m",
           "stops": 0,
-          "price_inr": 10401.0,
-          "base_fare_inr": 9143.81,
-          "taxes_inr": 457.19,
+          "price_inr": 9200.0,
+          "base_fare_inr": 8000.0,
+          "taxes_inr": 400.0,
           "route": "DEL -> HYD"
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "11:15 PM",
           "arrival_time": "1:30 AM+1",
@@ -447,23 +463,10 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "11:45 AM",
           "arrival_time": "2:00 PM",
-          "duration": "2h 15m",
-          "stops": 0,
-          "price_inr": 10966.0,
-          "base_fare_inr": 9681.9,
-          "taxes_inr": 484.1,
-          "route": "DEL -> HYD"
-        },
-        {
-          "horizon": "t+7",
-          "travel_date": "2026-10-09",
-          "airline": "IndiGo",
-          "departure_time": "1:30 PM",
-          "arrival_time": "3:45 PM",
           "duration": "2h 15m",
           "stops": 0,
           "price_inr": 8874.0,
@@ -473,7 +476,20 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
+          "airline": "IndiGo",
+          "departure_time": "1:30 PM",
+          "arrival_time": "3:45 PM",
+          "duration": "2h 15m",
+          "stops": 0,
+          "price_inr": 9350.0,
+          "base_fare_inr": 8142.86,
+          "taxes_inr": 407.14,
+          "route": "DEL -> HYD"
+        },
+        {
+          "horizon": "t+7",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "2:25 AM",
           "arrival_time": "4:40 AM",
@@ -486,7 +502,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "2:45 PM",
           "arrival_time": "5:05 PM",
@@ -499,7 +515,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "4:15 PM",
           "arrival_time": "6:30 PM",
@@ -512,7 +528,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "5:30 AM",
           "arrival_time": "7:50 AM",
@@ -525,7 +541,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "5:55 PM",
           "arrival_time": "8:15 PM",
@@ -538,7 +554,7 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "7:10 AM",
           "arrival_time": "9:20 AM",
@@ -551,58 +567,58 @@ window.DASHBOARD_DATA = {
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "7:45 PM",
           "arrival_time": "10:05 PM",
           "duration": "2h 20m",
           "stops": 0,
-          "price_inr": 10395.0,
-          "base_fare_inr": 9138.1,
-          "taxes_inr": 456.9,
+          "price_inr": 8874.0,
+          "base_fare_inr": 7689.52,
+          "taxes_inr": 384.48,
           "route": "DEL -> HYD"
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "8:30 AM",
           "arrival_time": "10:45 AM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9350.0,
-          "base_fare_inr": 8142.86,
-          "taxes_inr": 407.14,
+          "price_inr": 8874.0,
+          "base_fare_inr": 7689.52,
+          "taxes_inr": 384.48,
           "route": "DEL -> HYD"
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "9:00 PM",
           "arrival_time": "11:15 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 10395.0,
-          "base_fare_inr": 9138.1,
-          "taxes_inr": 456.9,
+          "price_inr": 8874.0,
+          "base_fare_inr": 7689.52,
+          "taxes_inr": 384.48,
           "route": "DEL -> HYD"
         },
         {
           "horizon": "t+7",
-          "travel_date": "2026-10-09",
+          "travel_date": "2026-10-10",
           "airline": "IndiGo",
           "departure_time": "9:55 AM",
           "arrival_time": "12:20 PM",
           "duration": "2h 25m",
           "stops": 0,
-          "price_inr": 9350.0,
-          "base_fare_inr": 8142.86,
-          "taxes_inr": 407.14,
+          "price_inr": 8874.0,
+          "base_fare_inr": 7689.52,
+          "taxes_inr": 384.48,
           "route": "DEL -> HYD"
         }
       ]
     }
   },
-  "last_updated": "2026-10-02 13:25:14"
+  "last_updated": "2026-10-03 09:21:41"
 };
