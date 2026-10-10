@@ -2,7 +2,7 @@
 ## Empirical Research Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Generated:** 2026-10-09 10:48:36  
+**Generated:** 2026-10-10 13:15:28  
 **Base Observation Date ($t_0$):** 2026-09-24  
 **Latest Observation Date ($t$):** 2026-10-09  
 **Net Airfare Price Movement:** +15.70%  

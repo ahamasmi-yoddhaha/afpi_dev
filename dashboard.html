@@ -225,7 +225,7 @@
         </div>
 
         <div id="cpiChartContainer" class="w-full h-64 relative flex items-center justify-center">
-          <svg id="cpiSvg" viewBox="0 0 500 220" class="w-full h-full overflow-visible"></svg>
+          <svg id="cpiSvg" viewBox="0 0 500 235" class="w-full h-full overflow-visible"></svg>
         </div>
       </div>
 
@@ -457,11 +457,11 @@
       }
 
       const width = 500;
-      const height = 220;
+      const height = 235;
       const paddingLeft = 55;
       const paddingRight = 55;
-      const paddingTop = 30;
-      const paddingBottom = 45;
+      const paddingTop = 26;
+      const paddingBottom = 56;
 
       const plotW = width - paddingLeft - paddingRight;
       const plotH = height - paddingTop - paddingBottom;
@@ -560,14 +560,36 @@
         });
       });
 
-      // Bottom date ticks
-      weightedPts.forEach((p, idx) => {
-        const shortDate = p.date.length >= 10 ? p.date.slice(5) : p.date;
+      // Bottom axis baseline
+      svg.innerHTML += `
+        <line x1="${paddingLeft}" y1="${paddingTop + plotH}" x2="${width - paddingRight}" y2="${paddingTop + plotH}" stroke="#cbd5e1" stroke-width="1.2" />
+      `;
+
+      // Month names lookup for date formatting
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      // Bottom date ticks: each point represented as its date
+      weightedPts.forEach((p) => {
+        let dateLabel = p.date.length >= 10 ? p.date.slice(5) : p.date;
+        const dParts = p.date.split("-");
+        if (dParts.length === 3) {
+          const day = dParts[2];
+          const mIdx = parseInt(dParts[1], 10) - 1;
+          if (mIdx >= 0 && mIdx < 12) {
+            dateLabel = `${day} ${monthNames[mIdx]}`;
+          }
+        }
+
         svg.innerHTML += `
-          <text x="${p.x}" y="${paddingTop + plotH + 18}" fill="#334155" font-size="10" font-weight="600" text-anchor="middle">Day ${idx + 1} (${shortDate})</text>
-          <text x="${p.x}" y="${paddingTop + plotH + 30}" fill="#64748b" font-size="9" text-anchor="middle">${p.flights} flights</text>
+          <line x1="${p.x}" y1="${paddingTop + plotH}" x2="${p.x}" y2="${paddingTop + plotH + 4}" stroke="#94a3b8" stroke-width="1" />
+          <text x="${p.x}" y="${paddingTop + plotH + 13}" fill="#475569" font-size="8.5" font-weight="600" text-anchor="end" transform="rotate(-40, ${p.x}, ${paddingTop + plotH + 13})">${dateLabel}</text>
         `;
       });
+
+      // Axis label: "Days"
+      svg.innerHTML += `
+        <text x="${paddingLeft + plotW / 2}" y="${height - 2}" fill="#64748b" font-size="10.5" font-weight="700" text-anchor="middle" class="mono uppercase tracking-wider">Days</text>
+      `;
     }
 
     // Line Highlight Interaction
