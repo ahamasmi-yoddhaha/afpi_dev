@@ -1,7 +1,7 @@
 # Airfare Database Data Cleaning & Standardisation Audit Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-04, 2026-10-05, 2026-10-06, 2026-10-07, 2026-10-08, 2026-10-09, 2026-10-10  
+**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-04, 2026-10-05, 2026-10-06, 2026-10-07, 2026-10-08, 2026-10-09, 2026-10-10, 2026-10-11  
 **Pipeline Execution:** Completed Successfully  
 
 ---
@@ -10,12 +10,12 @@
 
 | Metric | Count | Percentage |
 | :--- | :--- | :--- |
-| **Raw Scraped Observations** | **1,983** | 100.0% |
+| **Raw Scraped Observations** | **2,036** | 100.0% |
 | **Invalid / Missing Values Handled** | 0 | 0.0% |
-| **Duplicate Scrapes Removed** | 528 | 26.6% |
-| **Cleaned & De-duplicated Records** | **1,455** | **73.4%** |
-| **Statistical Outliers Flagged** | 87 | 6.0% |
-| **Strictly Balanced Panel Flights (All Dates)** | **13 per date** | — |
+| **Duplicate Scrapes Removed** | 528 | 25.9% |
+| **Cleaned & De-duplicated Records** | **1,508** | **74.1%** |
+| **Statistical Outliers Flagged** | 91 | 6.0% |
+| **Strictly Balanced Panel Flights (All Dates)** | **12 per date** | — |
 
 ---
 
@@ -29,11 +29,11 @@ In accordance with Indian Ministry of Civil Aviation (MoCA) and DGCA tariff guid
 
 | Component | Average Value (INR) | Share of Total Airfare |
 | :--- | :--- | :--- |
-| **Base Fare** | **Rs. 8,998.54** | **87.8%** |
-| **Taxes (GST 5%)** | Rs. 449.93 | 4.4% |
+| **Base Fare** | **Rs. 9,055.11** | **87.8%** |
+| **Taxes (GST 5%)** | Rs. 452.76 | 4.4% |
 | **Airport UDF & ASF Fee** | Rs. 450.00 | 4.4% |
 | **Convenience / Web Fee** | Rs. 350.00 | 3.4% |
-| **Total Gross Airfare** | **Rs. 10,248.46** | **100.0%** |
+| **Total Gross Airfare** | **Rs. 10,307.87** | **100.0%** |
 
 ---
 
@@ -57,6 +57,7 @@ The table below tracks flight service attrition (depleted seats / cancelled flig
 | 2026-10-07 &rarr; 2026-10-08 | 101 | 56 | 8 | 45 |
 | 2026-10-08 &rarr; 2026-10-09 | 53 | 6 | 5 | 47 |
 | 2026-10-09 &rarr; 2026-10-10 | 52 | 18 | 25 | 34 |
+| 2026-10-10 &rarr; 2026-10-11 | 59 | 12 | 6 | 47 |
 
 ---
 
