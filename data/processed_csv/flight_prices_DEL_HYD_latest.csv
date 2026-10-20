@@ -1,51 +1,51 @@
 scrape_timestamp,horizon,horizon_days,travel_date,origin,destination,airline,departure_time,arrival_time,duration_mins,stops,price_inr,source_portal,duration
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,2:30 PM,4:40 PM,130,0,8943.0,GoogleFlights-Aggregator,2 hr 10 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,12:30 PM,2:45 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,6:00 PM,8:20 PM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,2:00 AM,4:20 AM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,7:00 AM,9:20 AM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,10:30 AM,12:50 PM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,3:30 PM,5:55 PM,145,0,9248.0,GoogleFlights-Aggregator,2 hr 25 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,10:00 PM,12:20 AM+1,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Air India,11:00 PM,1:20 AM+1,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Akasa Air,2:10 PM,4:30 PM,140,0,9533.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,Akasa Air,8:40 PM,11:10 PM,150,0,9533.0,GoogleFlights-Aggregator,2 hr 30 min
-2026-10-19T09:11:06.701421,t+1,1,2026-10-20,DEL,HYD,IndiGo,10:00 AM,2:50 PM,290,1,11283.0,GoogleFlights-Aggregator,4 hr 50 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,7:30 PM,9:45 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,10:00 PM,12:15 AM+1,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,11:00 PM,1:15 AM+1,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Akasa Air,8:35 PM,10:55 PM,140,0,9533.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,2:00 PM,4:15 PM,135,0,10765.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,3:30 PM,5:45 PM,135,0,10765.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Akasa Air,2:20 PM,4:45 PM,145,0,11164.0,GoogleFlights-Aggregator,2 hr 25 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,IndiGo,5:10 AM,10:25 AM,315,1,11283.0,GoogleFlights-Aggregator,5 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,IndiGo,5:30 AM,10:15 AM,285,1,11598.0,GoogleFlights-Aggregator,4 hr 45 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,11:30 AM,1:50 PM,140,0,11631.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,6:00 PM,8:15 PM,135,0,11946.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,9:40 AM,11:55 AM,135,0,16971.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:16.201500,t+7,7,2026-10-26,DEL,HYD,Air India,7:00 AM,9:20 AM,140,0,19821.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Akasa Air,2:20 PM,4:45 PM,145,0,9101.0,GoogleFlights-Aggregator,2 hr 25 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Akasa Air,8:35 PM,10:55 PM,140,0,9101.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,2:00 PM,4:15 PM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,7:10 AM,9:20 AM,130,0,9300.0,GoogleFlights-Aggregator,2 hr 10 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,9:40 AM,11:55 AM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,11:30 AM,1:50 PM,140,0,9300.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,3:30 PM,5:45 PM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,6:00 PM,8:15 PM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,7:30 PM,9:45 PM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,10:00 PM,12:15 AM+1,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,Air India,11:00 PM,1:15 AM+1,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,IndiGo,5:00 AM,9:40 AM,280,1,10921.0,GoogleFlights-Aggregator,4 hr 40 min
-2026-10-19T09:11:25.517573,t+15,15,2026-11-03,DEL,HYD,IndiGo,2:15 AM,6:35 AM,260,1,11362.0,GoogleFlights-Aggregator,4 hr 20 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,6:00 PM,8:15 PM,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,7:30 PM,9:45 PM,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,10:00 PM,12:15 AM+1,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,11:00 PM,1:15 AM+1,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Akasa Air,8:35 PM,10:55 PM,140,0,10986.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,2:00 PM,4:15 PM,135,0,11180.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,IndiGo,6:15 PM,10:55 PM,280,1,11362.0,GoogleFlights-Aggregator,4 hr 40 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,7:10 AM,9:20 AM,130,0,11395.0,GoogleFlights-Aggregator,2 hr 10 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,9:40 AM,11:55 AM,135,0,11395.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,11:30 AM,1:50 PM,140,0,11395.0,GoogleFlights-Aggregator,2 hr 20 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Air India,3:30 PM,5:45 PM,135,0,11395.0,GoogleFlights-Aggregator,2 hr 15 min
-2026-10-19T09:11:35.326121,t+30,30,2026-11-18,DEL,HYD,Akasa Air,2:20 PM,4:45 PM,145,0,11532.0,GoogleFlights-Aggregator,2 hr 25 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,6:00 PM,8:20 PM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,10:00 PM,12:20 AM+1,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,11:00 PM,1:20 AM+1,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,2:00 AM,4:20 AM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,12:30 PM,2:45 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,2:30 PM,4:40 PM,130,0,9248.0,GoogleFlights-Aggregator,2 hr 10 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,3:30 PM,5:50 PM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Akasa Air,8:40 PM,11:10 PM,150,0,9533.0,GoogleFlights-Aggregator,2 hr 30 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,IndiGo,6:20 PM,10:45 PM,265,1,11362.0,GoogleFlights-Aggregator,4 hr 25 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,10:30 AM,12:50 PM,140,0,12597.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,7:00 AM,9:20 AM,140,0,22756.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:44.671584,t+1,1,2026-10-21,DEL,HYD,Air India,9:40 AM,12:00 PM,140,0,22756.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,6:00 PM,8:15 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,7:30 PM,9:45 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,7:00 AM,9:20 AM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,9:40 AM,11:55 AM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,11:30 AM,1:50 PM,140,0,9248.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,2:00 PM,4:15 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,3:30 PM,5:45 PM,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,10:00 PM,12:15 AM+1,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Air India,11:00 PM,1:15 AM+1,135,0,9248.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Akasa Air,8:35 PM,10:55 PM,140,0,9533.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,Akasa Air,2:20 PM,4:45 PM,145,0,9533.0,GoogleFlights-Aggregator,2 hr 25 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,IndiGo,5:10 AM,10:35 AM,325,1,11283.0,GoogleFlights-Aggregator,5 hr 25 min
+2026-10-20T08:46:54.000178,t+7,7,2026-10-27,DEL,HYD,IndiGo,2:15 AM,6:35 AM,260,1,11362.0,GoogleFlights-Aggregator,4 hr 20 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Akasa Air,8:35 PM,10:55 PM,140,0,9101.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,3:30 PM,5:45 PM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,10:00 PM,12:15 AM+1,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,7:10 AM,9:20 AM,130,0,9300.0,GoogleFlights-Aggregator,2 hr 10 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,9:40 AM,11:55 AM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,11:30 AM,1:50 PM,140,0,9300.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,2:00 PM,4:15 PM,135,0,9300.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Akasa Air,2:20 PM,4:45 PM,145,0,9533.0,GoogleFlights-Aggregator,2 hr 25 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,IndiGo,5:05 AM,9:40 AM,275,1,9760.0,GoogleFlights-Aggregator,4 hr 35 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,11:00 PM,1:15 AM+1,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,Air India,7:30 PM,9:45 PM,135,0,12650.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:03.378459,t+15,15,2026-11-04,DEL,HYD,IndiGo,2:15 AM,6:35 AM,260,1,13827.0,GoogleFlights-Aggregator,4 hr 20 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Akasa Air,8:35 PM,10:55 PM,140,0,10812.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,6:00 PM,8:15 PM,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,7:30 PM,9:45 PM,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,3:30 PM,5:45 PM,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,10:00 PM,12:15 AM+1,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,11:00 PM,1:15 AM+1,135,0,10818.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,IndiGo,5:00 AM,9:40 AM,280,1,10921.0,GoogleFlights-Aggregator,4 hr 40 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Akasa Air,2:20 PM,4:45 PM,145,0,11164.0,GoogleFlights-Aggregator,2 hr 25 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,7:10 AM,9:20 AM,130,0,11395.0,GoogleFlights-Aggregator,2 hr 10 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,11:30 AM,1:50 PM,140,0,11395.0,GoogleFlights-Aggregator,2 hr 20 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,IndiGo,7:10 AM,11:45 AM,275,1,11598.0,GoogleFlights-Aggregator,4 hr 35 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,9:40 AM,11:55 AM,135,0,11878.0,GoogleFlights-Aggregator,2 hr 15 min
+2026-10-20T08:47:12.836914,t+30,30,2026-11-19,DEL,HYD,Air India,2:00 PM,4:15 PM,135,0,13086.0,GoogleFlights-Aggregator,2 hr 15 min
