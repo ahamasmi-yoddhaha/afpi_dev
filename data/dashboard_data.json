@@ -4,16 +4,16 @@
   "origin": "DEL",
   "destination": "HYD",
   "kpis": {
-    "total_flights": 2365,
-    "days_tracked": 28,
-    "latest_index": 121.75,
-    "inflation_pct": 21.75,
-    "mean_fare": 10527.0,
-    "mean_base_fare": 9264.0,
-    "mean_taxes": 463.0,
+    "total_flights": 2729,
+    "days_tracked": 35,
+    "latest_index": 101.39,
+    "inflation_pct": 1.39,
+    "mean_fare": 10659.0,
+    "mean_base_fare": 9390.0,
+    "mean_taxes": 469.0,
     "mean_fees": 800.0,
     "min_fare": 7850.0,
-    "max_fare": 29044.0,
+    "max_fare": 31872.0,
     "balanced_panel_flights": 93
   },
   "daily_trend": [
@@ -130,143 +130,199 @@
       "flights": 52
     },
     {
-      "date": "2026-10-11",
-      "dutot": 116.71,
-      "jevons": 116.94,
-      "weighted": 100.37,
-      "mean_fare": 11927.0,
-      "flights": 53
+      "date": "2026-10-10",
+      "dutot": 115.61,
+      "jevons": 116.74,
+      "weighted": 103.94,
+      "mean_fare": 12296.0,
+      "flights": 59
     },
     {
-      "date": "2026-10-12",
-      "dutot": 107.83,
-      "jevons": 108.16,
-      "weighted": 97.72,
-      "mean_fare": 11089.0,
+      "date": "2026-10-11",
+      "dutot": 112.26,
+      "jevons": 112.53,
+      "weighted": 100.02,
+      "mean_fare": 11939.0,
       "flights": 53
     },
     {
       "date": "2026-10-13",
-      "dutot": 99.05,
-      "jevons": 100.59,
-      "weighted": 95.27,
-      "mean_fare": 10688.0,
-      "flights": 40
+      "dutot": 100.16,
+      "jevons": 99.62,
+      "weighted": 93.76,
+      "mean_fare": 11051.0,
+      "flights": 26
+    },
+    {
+      "date": "2026-10-14",
+      "dutot": 100.16,
+      "jevons": 99.62,
+      "weighted": 93.76,
+      "mean_fare": 9619.0,
+      "flights": 27
     },
     {
       "date": "2026-10-15",
-      "dutot": 111.05,
-      "jevons": 112.33,
-      "weighted": 99.36,
-      "mean_fare": 11554.0,
-      "flights": 51
+      "dutot": 100.16,
+      "jevons": 99.62,
+      "weighted": 93.76,
+      "mean_fare": 12534.0,
+      "flights": 26
     },
     {
       "date": "2026-10-16",
-      "dutot": 118.73,
-      "jevons": 117.42,
-      "weighted": 100.94,
-      "mean_fare": 11871.0,
+      "dutot": 115.68,
+      "jevons": 112.55,
+      "weighted": 91.34,
+      "mean_fare": 11795.0,
       "flights": 54
     },
     {
+      "date": "2026-10-17",
+      "dutot": 112.22,
+      "jevons": 111.28,
+      "weighted": 94.69,
+      "mean_fare": 11743.0,
+      "flights": 54
+    },
+    {
+      "date": "2026-10-18",
+      "dutot": 103.49,
+      "jevons": 104.11,
+      "weighted": 85.58,
+      "mean_fare": 11867.0,
+      "flights": 52
+    },
+    {
+      "date": "2026-10-19",
+      "dutot": 90.62,
+      "jevons": 92.56,
+      "weighted": 82.01,
+      "mean_fare": 10492.0,
+      "flights": 50
+    },
+    {
+      "date": "2026-10-20",
+      "dutot": 90.24,
+      "jevons": 91.96,
+      "weighted": 93.44,
+      "mean_fare": 10730.0,
+      "flights": 50
+    },
+    {
       "date": "2026-10-21",
-      "dutot": 98.93,
-      "jevons": 102.13,
-      "weighted": 93.13,
-      "mean_fare": 10499.0,
+      "dutot": 85.51,
+      "jevons": 88.89,
+      "weighted": 89.28,
+      "mean_fare": 10288.0,
       "flights": 51
     },
     {
       "date": "2026-10-22",
-      "dutot": 100.74,
-      "jevons": 102.72,
-      "weighted": 93.75,
-      "mean_fare": 10357.0,
-      "flights": 51
+      "dutot": 90.83,
+      "jevons": 92.89,
+      "weighted": 90.82,
+      "mean_fare": 11012.0,
+      "flights": 26
     },
     {
       "date": "2026-10-23",
-      "dutot": 109.11,
-      "jevons": 110.39,
-      "weighted": 100.73,
-      "mean_fare": 11398.0,
-      "flights": 52
+      "dutot": 107.45,
+      "jevons": 109.6,
+      "weighted": 96.6,
+      "mean_fare": 11418.0,
+      "flights": 53
+    },
+    {
+      "date": "2026-10-24",
+      "dutot": 103.81,
+      "jevons": 106.19,
+      "weighted": 94.0,
+      "mean_fare": 11685.0,
+      "flights": 94
     },
     {
       "date": "2026-10-25",
-      "dutot": 117.18,
-      "jevons": 119.53,
-      "weighted": 109.44,
-      "mean_fare": 11141.0,
-      "flights": 91
+      "dutot": 101.06,
+      "jevons": 106.16,
+      "weighted": 95.07,
+      "mean_fare": 11409.0,
+      "flights": 90
     },
     {
       "date": "2026-10-26",
-      "dutot": 112.67,
-      "jevons": 116.09,
-      "weighted": 106.01,
-      "mean_fare": 10745.0,
+      "dutot": 94.59,
+      "jevons": 100.43,
+      "weighted": 89.35,
+      "mean_fare": 10695.0,
       "flights": 93
     },
     {
       "date": "2026-10-27",
-      "dutot": 107.23,
-      "jevons": 111.23,
-      "weighted": 102.15,
-      "mean_fare": 10277.0,
-      "flights": 96
+      "dutot": 91.15,
+      "jevons": 97.09,
+      "weighted": 86.83,
+      "mean_fare": 10356.0,
+      "flights": 97
     },
     {
       "date": "2026-10-28",
-      "dutot": 109.84,
-      "jevons": 113.63,
-      "weighted": 103.87,
-      "mean_fare": 10533.0,
+      "dutot": 92.99,
+      "jevons": 99.25,
+      "weighted": 88.42,
+      "mean_fare": 10579.0,
       "flights": 96
     },
     {
       "date": "2026-10-29",
-      "dutot": 109.63,
-      "jevons": 113.32,
-      "weighted": 103.41,
-      "mean_fare": 10492.0,
+      "dutot": 92.95,
+      "jevons": 98.93,
+      "weighted": 88.06,
+      "mean_fare": 10546.0,
       "flights": 95
     },
     {
+      "date": "2026-10-30",
+      "dutot": 95.33,
+      "jevons": 101.4,
+      "weighted": 90.3,
+      "mean_fare": 10788.0,
+      "flights": 94
+    },
+    {
       "date": "2026-10-31",
-      "dutot": 132.11,
-      "jevons": 133.67,
-      "weighted": 121.75,
-      "mean_fare": 12566.0,
+      "dutot": 110.2,
+      "jevons": 114.64,
+      "weighted": 101.39,
+      "mean_fare": 12372.0,
       "flights": 93
     }
   ],
   "carriers": [
     {
       "carrier": "IndiGo",
-      "avg_price": 10272.0,
+      "avg_price": 10339.0,
       "min_price": 7850.0,
       "max_price": 29044.0,
-      "flights": 1056,
+      "flights": 1191,
       "market_share": 61.0,
       "has_data": true
     },
     {
       "carrier": "Air India",
-      "avg_price": 10810.0,
+      "avg_price": 10994.0,
       "min_price": 8675.0,
-      "max_price": 24966.0,
-      "flights": 1088,
+      "max_price": 31872.0,
+      "flights": 1276,
       "market_share": 27.0,
       "has_data": true
     },
     {
       "carrier": "Akasa Air",
-      "avg_price": 10350.0,
-      "min_price": 8297.0,
+      "avg_price": 10483.0,
+      "min_price": 7896.0,
       "max_price": 21029.0,
-      "flights": 221,
+      "flights": 262,
       "market_share": 4.5,
       "has_data": true
     }
@@ -306,9 +362,9 @@
       "arrival_time": "12:15 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -319,9 +375,9 @@
       "arrival_time": "12:45 AM+1",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -332,9 +388,9 @@
       "arrival_time": "2:00 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -345,9 +401,9 @@
       "arrival_time": "3:45 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -358,9 +414,9 @@
       "arrival_time": "4:20 AM",
       "duration": "2h 0m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -371,9 +427,9 @@
       "arrival_time": "5:05 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -384,9 +440,9 @@
       "arrival_time": "6:35 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -397,9 +453,9 @@
       "arrival_time": "7:10 AM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -410,9 +466,9 @@
       "arrival_time": "8:30 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -423,9 +479,9 @@
       "arrival_time": "8:45 AM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -436,9 +492,9 @@
       "arrival_time": "10:00 PM",
       "duration": "2h 15m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -449,9 +505,9 @@
       "arrival_time": "11:00 AM",
       "duration": "2h 0m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     },
     {
@@ -462,9 +518,9 @@
       "arrival_time": "11:20 PM",
       "duration": "2h 20m",
       "stops": 0,
-      "price_inr": 9291.0,
-      "base_fare_inr": 8086.67,
-      "taxes_inr": 404.33,
+      "price_inr": 8712.0,
+      "base_fare_inr": 7535.24,
+      "taxes_inr": 376.76,
       "route": "DEL -> HYD"
     }
   ],
@@ -474,16 +530,16 @@
   "data": {
     "DEL -> HYD": {
       "kpis": {
-        "total_flights": 2365,
-        "days_tracked": 28,
-        "latest_index": 121.75,
-        "inflation_pct": 21.75,
-        "mean_fare": 10527.0,
-        "mean_base_fare": 9264.0,
-        "mean_taxes": 463.0,
+        "total_flights": 2729,
+        "days_tracked": 35,
+        "latest_index": 101.39,
+        "inflation_pct": 1.39,
+        "mean_fare": 10659.0,
+        "mean_base_fare": 9390.0,
+        "mean_taxes": 469.0,
         "mean_fees": 800.0,
         "min_fare": 7850.0,
-        "max_fare": 29044.0,
+        "max_fare": 31872.0,
         "balanced_panel_flights": 93
       },
       "daily_trend": [
@@ -600,143 +656,199 @@
           "flights": 52
         },
         {
-          "date": "2026-10-11",
-          "dutot": 116.71,
-          "jevons": 116.94,
-          "weighted": 100.37,
-          "mean_fare": 11927.0,
-          "flights": 53
+          "date": "2026-10-10",
+          "dutot": 115.61,
+          "jevons": 116.74,
+          "weighted": 103.94,
+          "mean_fare": 12296.0,
+          "flights": 59
         },
         {
-          "date": "2026-10-12",
-          "dutot": 107.83,
-          "jevons": 108.16,
-          "weighted": 97.72,
-          "mean_fare": 11089.0,
+          "date": "2026-10-11",
+          "dutot": 112.26,
+          "jevons": 112.53,
+          "weighted": 100.02,
+          "mean_fare": 11939.0,
           "flights": 53
         },
         {
           "date": "2026-10-13",
-          "dutot": 99.05,
-          "jevons": 100.59,
-          "weighted": 95.27,
-          "mean_fare": 10688.0,
-          "flights": 40
+          "dutot": 100.16,
+          "jevons": 99.62,
+          "weighted": 93.76,
+          "mean_fare": 11051.0,
+          "flights": 26
+        },
+        {
+          "date": "2026-10-14",
+          "dutot": 100.16,
+          "jevons": 99.62,
+          "weighted": 93.76,
+          "mean_fare": 9619.0,
+          "flights": 27
         },
         {
           "date": "2026-10-15",
-          "dutot": 111.05,
-          "jevons": 112.33,
-          "weighted": 99.36,
-          "mean_fare": 11554.0,
-          "flights": 51
+          "dutot": 100.16,
+          "jevons": 99.62,
+          "weighted": 93.76,
+          "mean_fare": 12534.0,
+          "flights": 26
         },
         {
           "date": "2026-10-16",
-          "dutot": 118.73,
-          "jevons": 117.42,
-          "weighted": 100.94,
-          "mean_fare": 11871.0,
+          "dutot": 115.68,
+          "jevons": 112.55,
+          "weighted": 91.34,
+          "mean_fare": 11795.0,
           "flights": 54
         },
         {
+          "date": "2026-10-17",
+          "dutot": 112.22,
+          "jevons": 111.28,
+          "weighted": 94.69,
+          "mean_fare": 11743.0,
+          "flights": 54
+        },
+        {
+          "date": "2026-10-18",
+          "dutot": 103.49,
+          "jevons": 104.11,
+          "weighted": 85.58,
+          "mean_fare": 11867.0,
+          "flights": 52
+        },
+        {
+          "date": "2026-10-19",
+          "dutot": 90.62,
+          "jevons": 92.56,
+          "weighted": 82.01,
+          "mean_fare": 10492.0,
+          "flights": 50
+        },
+        {
+          "date": "2026-10-20",
+          "dutot": 90.24,
+          "jevons": 91.96,
+          "weighted": 93.44,
+          "mean_fare": 10730.0,
+          "flights": 50
+        },
+        {
           "date": "2026-10-21",
-          "dutot": 98.93,
-          "jevons": 102.13,
-          "weighted": 93.13,
-          "mean_fare": 10499.0,
+          "dutot": 85.51,
+          "jevons": 88.89,
+          "weighted": 89.28,
+          "mean_fare": 10288.0,
           "flights": 51
         },
         {
           "date": "2026-10-22",
-          "dutot": 100.74,
-          "jevons": 102.72,
-          "weighted": 93.75,
-          "mean_fare": 10357.0,
-          "flights": 51
+          "dutot": 90.83,
+          "jevons": 92.89,
+          "weighted": 90.82,
+          "mean_fare": 11012.0,
+          "flights": 26
         },
         {
           "date": "2026-10-23",
-          "dutot": 109.11,
-          "jevons": 110.39,
-          "weighted": 100.73,
-          "mean_fare": 11398.0,
-          "flights": 52
+          "dutot": 107.45,
+          "jevons": 109.6,
+          "weighted": 96.6,
+          "mean_fare": 11418.0,
+          "flights": 53
+        },
+        {
+          "date": "2026-10-24",
+          "dutot": 103.81,
+          "jevons": 106.19,
+          "weighted": 94.0,
+          "mean_fare": 11685.0,
+          "flights": 94
         },
         {
           "date": "2026-10-25",
-          "dutot": 117.18,
-          "jevons": 119.53,
-          "weighted": 109.44,
-          "mean_fare": 11141.0,
-          "flights": 91
+          "dutot": 101.06,
+          "jevons": 106.16,
+          "weighted": 95.07,
+          "mean_fare": 11409.0,
+          "flights": 90
         },
         {
           "date": "2026-10-26",
-          "dutot": 112.67,
-          "jevons": 116.09,
-          "weighted": 106.01,
-          "mean_fare": 10745.0,
+          "dutot": 94.59,
+          "jevons": 100.43,
+          "weighted": 89.35,
+          "mean_fare": 10695.0,
           "flights": 93
         },
         {
           "date": "2026-10-27",
-          "dutot": 107.23,
-          "jevons": 111.23,
-          "weighted": 102.15,
-          "mean_fare": 10277.0,
-          "flights": 96
+          "dutot": 91.15,
+          "jevons": 97.09,
+          "weighted": 86.83,
+          "mean_fare": 10356.0,
+          "flights": 97
         },
         {
           "date": "2026-10-28",
-          "dutot": 109.84,
-          "jevons": 113.63,
-          "weighted": 103.87,
-          "mean_fare": 10533.0,
+          "dutot": 92.99,
+          "jevons": 99.25,
+          "weighted": 88.42,
+          "mean_fare": 10579.0,
           "flights": 96
         },
         {
           "date": "2026-10-29",
-          "dutot": 109.63,
-          "jevons": 113.32,
-          "weighted": 103.41,
-          "mean_fare": 10492.0,
+          "dutot": 92.95,
+          "jevons": 98.93,
+          "weighted": 88.06,
+          "mean_fare": 10546.0,
           "flights": 95
         },
         {
+          "date": "2026-10-30",
+          "dutot": 95.33,
+          "jevons": 101.4,
+          "weighted": 90.3,
+          "mean_fare": 10788.0,
+          "flights": 94
+        },
+        {
           "date": "2026-10-31",
-          "dutot": 132.11,
-          "jevons": 133.67,
-          "weighted": 121.75,
-          "mean_fare": 12566.0,
+          "dutot": 110.2,
+          "jevons": 114.64,
+          "weighted": 101.39,
+          "mean_fare": 12372.0,
           "flights": 93
         }
       ],
       "carriers": [
         {
           "carrier": "IndiGo",
-          "avg_price": 10272.0,
+          "avg_price": 10339.0,
           "min_price": 7850.0,
           "max_price": 29044.0,
-          "flights": 1056,
+          "flights": 1191,
           "market_share": 61.0,
           "has_data": true
         },
         {
           "carrier": "Air India",
-          "avg_price": 10810.0,
+          "avg_price": 10994.0,
           "min_price": 8675.0,
-          "max_price": 24966.0,
-          "flights": 1088,
+          "max_price": 31872.0,
+          "flights": 1276,
           "market_share": 27.0,
           "has_data": true
         },
         {
           "carrier": "Akasa Air",
-          "avg_price": 10350.0,
-          "min_price": 8297.0,
+          "avg_price": 10483.0,
+          "min_price": 7896.0,
           "max_price": 21029.0,
-          "flights": 221,
+          "flights": 262,
           "market_share": 4.5,
           "has_data": true
         }
@@ -776,9 +888,9 @@
           "arrival_time": "12:15 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -789,9 +901,9 @@
           "arrival_time": "12:45 AM+1",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -802,9 +914,9 @@
           "arrival_time": "2:00 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -815,9 +927,9 @@
           "arrival_time": "3:45 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -828,9 +940,9 @@
           "arrival_time": "4:20 AM",
           "duration": "2h 0m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -841,9 +953,9 @@
           "arrival_time": "5:05 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -854,9 +966,9 @@
           "arrival_time": "6:35 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -867,9 +979,9 @@
           "arrival_time": "7:10 AM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -880,9 +992,9 @@
           "arrival_time": "8:30 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -893,9 +1005,9 @@
           "arrival_time": "8:45 AM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -906,9 +1018,9 @@
           "arrival_time": "10:00 PM",
           "duration": "2h 15m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -919,9 +1031,9 @@
           "arrival_time": "11:00 AM",
           "duration": "2h 0m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         },
         {
@@ -932,13 +1044,13 @@
           "arrival_time": "11:20 PM",
           "duration": "2h 20m",
           "stops": 0,
-          "price_inr": 9291.0,
-          "base_fare_inr": 8086.67,
-          "taxes_inr": 404.33,
+          "price_inr": 8712.0,
+          "base_fare_inr": 7535.24,
+          "taxes_inr": 376.76,
           "route": "DEL -> HYD"
         }
       ]
     }
   },
-  "last_updated": "2026-10-31 10:52:44"
+  "last_updated": "2026-10-31 09:52:57"
 }
