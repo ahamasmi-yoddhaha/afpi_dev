@@ -2,10 +2,10 @@
 ## Empirical Research Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Generated:** 2026-11-06 11:17:46  
+**Generated:** 2026-11-07 10:33:18  
 **Base Observation Date ($t_0$):** 2026-09-24  
-**Latest Observation Date ($t$):** 2026-11-06  
-**Net Airfare Price Movement:** -12.11%  
+**Latest Observation Date ($t$):** 2026-11-07  
+**Net Airfare Price Movement:** -4.34%  
 
 ---
 
@@ -60,6 +60,7 @@ The table below tracks day-over-day price evolution across observation dates:
 | 2026-11-04 | 97 | Rs. 10,678.56 | Rs. 10,525.32 | 93.67 | 100.22 | **89.67** | -10.33% |
 | 2026-11-05 | 100 | Rs. 10,440.26 | Rs. 10,365.71 | 91.83 | 98.62 | **88.91** | -11.09% |
 | 2026-11-06 | 103 | Rs. 10,317.02 | Rs. 10,224.30 | 91.03 | 97.68 | **87.89** | -12.11% |
+| 2026-11-07 | 90 | Rs. 11,434.56 | Rs. 11,355.88 | 99.44 | 105.85 | **95.66** | -4.34% |
 
 > **Methodology Notes:**
 > - **Dutot Index**: Ratio of arithmetic mean prices ($ar{P}_t / ar{P}_0 	imes 100$).
