@@ -1,7 +1,7 @@
 # Airfare Database Data Cleaning & Standardisation Audit Report
 
 **Route Corridor:** Delhi Indira Gandhi International (DEL) &rarr; Hyderabad Rajiv Gandhi International (HYD)  
-**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-04, 2026-10-05, 2026-10-06, 2026-10-07, 2026-10-08, 2026-10-09, 2026-10-10, 2026-10-11, 2026-10-13, 2026-10-14, 2026-10-15, 2026-10-16, 2026-10-17, 2026-10-18, 2026-10-19, 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28, 2026-10-29, 2026-10-30, 2026-10-31, 2026-11-01, 2026-11-02, 2026-11-03, 2026-11-04, 2026-11-05, 2026-11-06, 2026-11-07, 2026-11-08, 2026-11-09, 2026-11-10, 2026-11-11  
+**Observation Dates:** 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-09-28, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-04, 2026-10-05, 2026-10-06, 2026-10-07, 2026-10-08, 2026-10-09, 2026-10-10, 2026-10-11, 2026-10-13, 2026-10-14, 2026-10-15, 2026-10-16, 2026-10-17, 2026-10-18, 2026-10-19, 2026-10-20, 2026-10-21, 2026-10-22, 2026-10-23, 2026-10-24, 2026-10-25, 2026-10-26, 2026-10-27, 2026-10-28, 2026-10-29, 2026-10-30, 2026-10-31, 2026-11-01, 2026-11-02, 2026-11-03, 2026-11-04, 2026-11-05, 2026-11-06, 2026-11-07, 2026-11-08, 2026-11-09, 2026-11-10, 2026-11-11, 2026-11-12  
 **Pipeline Execution:** Completed Successfully  
 
 ---
@@ -10,11 +10,11 @@
 
 | Metric | Count | Percentage |
 | :--- | :--- | :--- |
-| **Raw Scraped Observations** | **4,321** | 100.0% |
+| **Raw Scraped Observations** | **4,420** | 100.0% |
 | **Invalid / Missing Values Handled** | 0 | 0.0% |
-| **Duplicate Scrapes Removed** | 528 | 12.2% |
-| **Cleaned & De-duplicated Records** | **3,793** | **87.8%** |
-| **Statistical Outliers Flagged** | 179 | 4.7% |
+| **Duplicate Scrapes Removed** | 528 | 11.9% |
+| **Cleaned & De-duplicated Records** | **3,892** | **88.1%** |
+| **Statistical Outliers Flagged** | 188 | 4.8% |
 | **Strictly Balanced Panel Flights (All Dates)** | **0 per date** | — |
 
 ---
@@ -29,11 +29,11 @@ In accordance with Indian Ministry of Civil Aviation (MoCA) and DGCA tariff guid
 
 | Component | Average Value (INR) | Share of Total Airfare |
 | :--- | :--- | :--- |
-| **Base Fare** | **Rs. 9,480.55** | **88.2%** |
-| **Taxes (GST 5%)** | Rs. 474.03 | 4.4% |
+| **Base Fare** | **Rs. 9,463.04** | **88.1%** |
+| **Taxes (GST 5%)** | Rs. 473.15 | 4.4% |
 | **Airport UDF & ASF Fee** | Rs. 450.00 | 4.2% |
 | **Convenience / Web Fee** | Rs. 350.00 | 3.3% |
-| **Total Gross Airfare** | **Rs. 10,754.58** | **100.0%** |
+| **Total Gross Airfare** | **Rs. 10,736.19** | **100.0%** |
 
 ---
 
@@ -88,6 +88,7 @@ The table below tracks flight service attrition (depleted seats / cancelled flig
 | 2026-11-08 &rarr; 2026-11-09 | 93 | 7 | 10 | 86 |
 | 2026-11-09 &rarr; 2026-11-10 | 96 | 7 | 4 | 89 |
 | 2026-11-10 &rarr; 2026-11-11 | 93 | 23 | 7 | 70 |
+| 2026-11-11 &rarr; 2026-11-12 | 77 | 3 | 25 | 74 |
 
 ---
 
